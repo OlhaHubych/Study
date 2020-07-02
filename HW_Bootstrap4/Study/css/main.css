@@ -1,0 +1,15 @@
+/* .row {
+    height: 300px;
+    background-color: cornflowerblue;
+}
+.row div{
+    background: aqua;
+    height: 50px;
+}
+
+.row div:nth-child(odd){
+    background: lightgreen;
+} */
+img {
+    width: 300px;
+}

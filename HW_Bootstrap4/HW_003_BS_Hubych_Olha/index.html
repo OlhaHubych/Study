@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- Создать каждый компонент используя все классы и атрибуты. -->
+                <h3>Alerts</h3>
+                <div class="alert alert-primary" role="alert">
+                    Primary alert 
+                    <a href="#" class="alert-link">alert link with primary color</a>
+                </div>
+                <div class="alert alert-secondary" role="alert">
+                    Secondary alert
+                </div>
+                <div class="alert alert-success" role="alert">
+                    Success alert
+                    <a href="#" class="alert-link"> alert link with success color</a> 
+                </div>
+                <div class="alert alert-danger" role="alert">
+                    Danger alert
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    Warning alert
+                    <a href="#" class="alert-link">alert link with warning color</a>
+                </div>
+                <div class="alert alert-info" role="alert">
+                    Info alert
+                </div>
+                <div class="alert alert-dark" role="alert">
+                    Dark alert
+                </div>
+                <div class="alert alert-light" role="alert">
+                    Light alert
+                </div>
+
+                <hr>
+                <h3>Breadcrumb</h3>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active">Home</li>
+                    </ol>
+                </nav>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumd-item"><a href="#">Home </a></li>
+                        <li class="division breadcrumb-item active"> Mails</li>
+                    </ol>
+                </nav>
+                <div class="alert alert-danger" role="alert">
+                    <h3 class="alert-heading">Lorem ipsum dolor sit amet!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <b>Ipsum</b>, numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque in ab neque unde laborum sed placeat consequatur ducimus totam libero, rem laboriosam, at, id error! Optio quasi reprehenderit tempore architecto.</p>
+                    <hr>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus necessitatibus adipisci quae?</p>
+                </div>
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Lorem ipsum dolor sit amet.</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo cum nulla earum.</p>
+                </div>
+                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                    <strong>Lorem ipsum dolor sit!</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, minus?
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <hr>
+                <h3>Badges</h3>
+                <h1>H1 headings<span class="badge badge-secondary">First</span></h1>
+                <h2>H2 headings<span class="badge badge-secondary">First</span></h2>
+                <h3>H3 headings<span class="badge badge-secondary">First</span></h3>
+                <h4>H4 headings<span class="badge badge-secondary">First</span></h4>
+                <h5>H5 headings<span class="badge badge-secondary">First</span></h5>
+                <h6>H6 headings<span class="badge badge-secondary">First</span></h6>
+                
+            
+                <button type="button" class="btn btn-danger">
+                    Mails <span class="badge badge-light">100</span>
+                    <span class="sr-only"> unread messages</span>
+                </button>
+            
+            
+                <span class="badge badge-primary">Primary badge</span>
+                <span class="badge badge-pill badge-secondary">Secondary badge</span>
+                <span class="badge badge-success">Success badge</span>
+                <span class="badge badge-pill badge-warning">Warning badge</span>
+                <span class="badge badge-light">Light badge</span>
+                <span class="badge badge-pill badge-dark">Dark badge</span>
+                <span class="badge badge-info">Info badge</span>
+
+                <a href="#" class="badge badge-primary">Primary badge</a>
+                <a href="#" class="badge badge-pill badge-secondary">Secondary badge</a>
+                
+                <hr>
+                <h3>Buttons</h3>
+                <button type="button" class="btn btn-primary">Primary button</button>
+                <button type="button" class="btn btn-secondary">Secondary button</button>
+                <button type="button" class="btn btn-danger">Danger button</button>
+                <button type="button" class="btn btn-warning">Warning button</button>
+                <button type="button" class="btn btn-info">Info button</button>
+                <button type="button" class="btn btn-dark">Dark button</button>
+                <button type="button" class="btn btn-success">Succes button</button>
+                <button type="button" class="btn btn-light">Light button</button> <br>
+
+                <button type="button" class="btn btn-outline-primary">Primary button</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary button</button>
+                <button type="button" class="btn btn-outline-danger">Danger button</button>
+
+                <button type="button" class="btn btn-outline-warning">Warning button</button>
+                <button type="button" class="btn btn-outline-info">Info button</button>
+                <button type="button" class="btn btn-outline-dark">Dark button</button>
+                <button type="button" class="btn btn-outline-light">Light button</button> <br>
+
+                <button type="button" class="btn btn-outline-primary btn-lg">Primary button</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg">Secondary button</button>
+                <button type="button" class="btn btn-outline-danger btn-sm">Danger button</button>
+                <button type="button" class="btn btn-outline-warning btn-sm">Warning button</button> <br>
+
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block">Primary button</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg btn-block">Secondary button</button> <br>
+
+                <a href="#" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Главная ссылка</a>
+                <a href="#" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Ссылка</a> <br>
+                
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                        <input type="checkbox" checked autocomplete="off"> Checked
+                    </label>
+                    </div> 
+
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-success active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio
+                    </label>
+                    <label class="btn btn-success">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                    </label>
+                    <label class="btn btn-success">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+                    </label>
+                </div>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-info">1</button>
+                        <button type="button" class="btn btn-info">2</button>
+                        <button type="button" class="btn btn-info">3</button>
+                        <button type="button" class="btn btn-info">4</button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second group">
+                        <button type="button" class="btn btn-info">5</button>
+                        <button type="button" class="btn btn-info">6</button>
+                        <button type="button" class="btn btn-info">7</button>
+                    </div>
+                </div>
+                <div class="btn-group mr-2 btn-group-lg" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-info">1</button>
+                    <button type="button" class="btn btn-info">2</button>
+                    <button type="button" class="btn btn-info">3</button>
+                    <button type="button" class="btn btn-info">4</button>
+                </div>
+                <div class="btn-group mr-2 btn-group-sm" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-info">1</button>
+                    <button type="button" class="btn btn-info">2</button>
+                    <button type="button" class="btn btn-info">3</button>
+                    <button type="button" class="btn btn-info">4</button>
+                </div>
+            
+                <hr>
+                <h3>Carts</h3>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/001.jpg" class="card-img-top" alt="Van Gogh">
+                    <div class="card-body">
+                        <h5 class="card-title">Van Gogh - The Starry Night</h5>
+                        <p class="card-text">Painted in June 1889, it describes the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an ideal village.</p>
+                        <a href="https://en.wikipedia.org/wiki/The_Starry_Night" class="btn btn-primary">More on Wikipedia</a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card text-white bg-dark">
+                        <img src="img/001.jpg" class="card-img" alt="Van Gogh">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Van Gogh - The Starry Night</h5>
+                            <p class="card-text">Painted in June 1889, it describes the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an ideal village.
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3>Dropdowns</h3>
+                <div class="dropdown dropup">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                        Dropdowns button
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-lg" data-toggle="dropdown">
+                        Info button
+                    </button>
+                    <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown">
+                        Dark button
+                        </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+                <hr>
+
+                <h3>Form</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">Example multiple select</label>
+                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </form>
+
+                <form>
+                    <div class="form-group">
+                        <label for="formControlRange">Range input</label>
+                        <input type="range" class="form-control-range" id="formControlRange">
+                    </div>
+                </form>
+
+                <form class="form-inline">
+                    <label class="sr-only" for="inlineFormInputName2">Name</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Olha Hubych">
+                    
+                <label class="sr-only" for="inlineFormInputGroupUsername2">Имя пользователя</label>
+                <div class="input-group mb-2 mr-sm-2">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text">@</div>
+                    </div>
+                    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Имя пользователя">
+                </div>
+                    
+                <div class="form-check mb-2 mr-sm-2">
+                    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                    <label class="form-check-label" for="inlineFormCheck">
+                    Remember me
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Login</button>
+                </form>
+
+                <hr>
+                <h3>Navigation</h3>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li> 
+                </ul>
+                <nav class="navbar navbar-light bg-light">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/001.jpg" width="30" height="30" class="d-inline-block align-top img_size" alt="">
+                        Bootstrap
+                    </a>
+                </nav>
+                <hr>
+                <h3>Progress Bar</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 25%"></div>
+                </div>
+
+                <hr>
+                <h3>Tooltip</h3>
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title data-original-title="Tooltip on top">
+                Tooltip on top
+                </button>
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title data-original-title="Tooltip on right">
+                Tooltip on right
+                </button>
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title data-original-title="Tooltip on bottom">
+                Tooltip on bottom
+                </button>
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="left" title data-original-title="Tooltip on left">
+                Tooltip on left
+                </button>
+
+                <hr>
+                <h3>Scrollspy</h3>
+                <nav id="navbar-example2" class="navbar navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                        <a class="nav-link" href="#fat">@fat</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#mdo">@mdo</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#one">one</a>
+                            <a class="dropdown-item" href="#two">two</a>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#three">three</a>
+                        </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="spy">
+                    <h4 id="fat">@fat</h4>
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!</p>
+                    <h4 id="mdo">@mdo</h4>
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!</p>
+                    <h4 id="one">one</h4>
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!</p>
+                    <h4 id="two">two</h4>
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!</p>
+                    <h4 id="three">three</h4>
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque eos distinctio temporibus assumenda! 
+                        Quas aut quasi eius minus tempora!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

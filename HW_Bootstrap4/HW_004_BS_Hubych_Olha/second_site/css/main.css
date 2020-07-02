@@ -1,0 +1,35 @@
+body {
+    background-color: #e1f5fe;
+}
+
+div > h2 {
+    color: #0277bd;
+}
+div > p.display-4 {
+    color: #0091ea;
+}
+.fqa-bg {
+    background-color: #b3e5fc;
+}
+.bg-but {
+    background-color: #64b5f6;
+    color: white;
+    font-weight: bold;
+}
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+footer {
+    height: 50px;
+    background-color: #b3e5fc;
+}

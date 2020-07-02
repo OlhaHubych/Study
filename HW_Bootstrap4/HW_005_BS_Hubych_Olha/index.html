@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <!-- Создать блок, который включает два абзаца по 30 слов, и список на 5 строк. -->
+                <!-- Изменить цвета: первый абзац – красный, второй абзац – желтый, cписок – синяя граница. -->
+                <!-- Применить заливку: первый абзац – темная, второй абзац – зеленая, в таблице парные строки – серый. -->
+                <p class="bg-dark text-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nesciunt facere aspernatur culpa nisi tempore saepe! 
+                    Itaque veritatis eaque libero quae quaerat praesentium officiis, nostrum debitis non et. Veniam, sed.</p>
+                <p class="bg-success text-warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores esse, a minus facere accusamus qui dolor? 
+                    Dolorem recusandae voluptatibus illum vero maxime nisi dolore fuga perspiciatis in laudantium! Debitis.</p>
+            </div>
+            <div class="col">
+                <ol class="border border-info">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea.</li>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea.</li>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea.</li>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea.</li>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea.</li>
+                </ol>
+            </div>
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item border-bottom border-info">Lorem ipsum dolor sit amet.</li>
+                    <li class="list-group-item border-bottom border-info">Lorem ipsum dolor sit amet.</li>
+                    <li class="list-group-item border-bottom border-info">Lorem ipsum dolor sit amet.</li>
+                    <li class="list-group-item border-bottom border-info">Lorem ipsum dolor sit amet.</li>
+                    <li class="list-group-item border-bottom border-info">Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Создать блок, который включает два абзаца по 30 слов, и список на 5 строк.
+            Установить ширину абзацев по 45%, и выровнять по центру.
+            Элементы списка сделать строчными
+            На мобильной версии первый абзац становится вторым, а второй – первым.
+            На большом расширении элементы списка прижаты к правому краю, в обратном порядке -->
+        <div class="row">
+            <div class="col-12 flex-row d-flex flex-sm-column flex-md-column flex-lg-column flex-xl-column flex-column-reverse">
+                <p class="w-50 mx-auto text-center">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nesciunt facere aspernatur culpa nisi tempore saepe! 
+                    Itaque veritatis eaque libero quae quaerat praesentium officiis, nostrum debitis non et. Veniam, sed.</p>
+                
+                    <p class="w-50 mx-auto text-center">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores esse, a minus facere accusamus qui dolor? 
+                    Dolorem recusandae voluptatibus illum vero maxime nisi dolore fuga perspiciatis in laudantium! Debitis.</p>
+            </div>
+            <div class="col-12 ">
+                <ol class="list-inline d-flex flex-column flex-lg-column-reverse flex-xl-column-reverse">
+                    <li class="list-inline-item d-block">1 Lorem ipsum dolor sit amet.</li>
+                    <li class="list-inline-item d-block">2 Lorem ipsum dolor sit amet.</li>
+                    <li class="list-inline-item d-block">3 Lorem ipsum dolor sit amet.</li>
+                    <li class="list-inline-item d-block">4 Lorem ipsum dolor sit amet.</li>
+                    <li class="list-inline-item d-block">5 Lorem ipsum dolor sit amet.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

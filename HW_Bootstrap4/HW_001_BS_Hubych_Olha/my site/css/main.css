@@ -1,0 +1,67 @@
+@font-face {
+    font-family: forum-regular;
+    font-weight: normal;
+    src: url('../font/Forum/forum-regular.ttf');
+}
+@font-face {
+    font-family: cormorant;
+    font-weight: bold;
+    src: url('../font/Cormorant/Cormorant-SemiBoldItalic.ttf');
+}
+@font-face {
+    font-family: cormorantIt;
+    src: url('../font/Cormorant/Cormorant-Italic.ttf');
+}
+@font-face {
+    font-family: elzevir;
+    src: url('../font/Elzevir/Elzevir.ttf');
+}
+body {
+    margin: 0;
+    font-family: forum-regular;
+    font-size: 19px;
+    color: black;
+    text-align: center;
+
+}
+header {
+    background-color: rgb(44, 40, 40);
+    color: whitesmoke; 
+}
+h1 {
+    color: gold;
+    font-family: elzevir;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+h1 + p {
+    font-family: cormorantIt;
+    font-size: 25px;
+}
+.intro {
+    font-size: 20px;
+}
+header .row {
+    min-height: 200px;
+}
+section .row {
+    min-height: 80px;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+footer {
+    background-color: rgb(63, 58, 58);
+    color: whitesmoke;
+    font-size: 14px;
+}
+footer .row{
+    height: 80px;
+}
+.highlight:hover {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+

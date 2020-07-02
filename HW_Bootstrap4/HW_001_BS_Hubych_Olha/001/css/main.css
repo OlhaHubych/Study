@@ -1,0 +1,13 @@
+.row {
+    background-color: cornflowerblue;
+    height: 300px;
+}
+.row div:nth-child(even){
+    background: aqua;
+    height: 60px;
+}
+
+.row div:nth-child(odd){
+    background: lightgreen;
+    height: 60px;
+}
