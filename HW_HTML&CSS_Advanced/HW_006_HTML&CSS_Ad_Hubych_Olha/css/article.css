@@ -1,0 +1,19 @@
+article {
+  margin: 0 auto;
+  width: 80vw;
+  padding: 1.2em;
+  background-color: #03034b;
+  color: beige;
+  border: 0.2em dashed beige;
+  border-radius: 5px;
+}
+
+article p {
+  text-indent: 1.5em;
+}
+
+article hr {
+  border: dashed 0.2em #eaeab4;
+  height: 0;
+}
+/*# sourceMappingURL=article.css.map */

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: thistle;
+        }
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            width: 100vw;
+            height: 50px;
+            background-color: darkslateblue;
+        }
+        .nav-elem {
+            display: block;
+            width: 150px;
+            border-right: 1px solid white;
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            text-align: center;
+            cursor: pointer;
+        }
+        .nav-elem:hover {
+            background-color: rgb(101, 93, 151);
+            border-bottom: 2px solid rgb(35, 27, 88);
+        }
+        .nav-elem:active {
+            background-color: purple;
+        }
+
+        /* dropdown */
+        .button-dropdown {
+            display: block;
+            width: 150px;
+            background-color: darkslateblue;
+            margin: 0;
+            padding: 1em;
+            color: white;
+            cursor: pointer;
+            outline: none;
+            text-align: center;
+            border: none;
+            border-right: 1px solid white;
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: border-bottom 0.5s;
+        }
+        .dropdown-block {
+            position: relative;
+            display: inline-block;
+            
+        }
+        .dd-content {
+            /* display: none; */
+            position: absolute;
+            width: 149px;
+            background-color: darkslateblue;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+            z-index: -1;
+            transform: translateY(-1em);
+            visibility: hidden; 
+            opacity: 0;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        .dd-content a {
+            border-bottom: 1px solid white;
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            text-align: center;
+            cursor: pointer;
+            display: block; 
+            
+        }
+        .dd-content a:last-of-type {
+            border-bottom: none;
+        }
+        .dd-content a:hover {
+            background-color: rgb(101, 93, 151);
+            
+        }
+        .dd-content a:active {
+            background-color: purple;
+        }
+        .dropdown-block:hover .dd-content {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0%);
+            z-index: 1;
+            /* display: block; */ 
+        }
+        
+        .dropdown-block:hover .button-dropdown {
+            background-color: rgb(101, 93, 151);
+            border-bottom: 2px solid rgb(35, 27, 88);
+        }
+        i::after {
+            content: "";
+            margin-right: 3px;
+        }
+        i {
+            font-size: 1em;
+        }
+        i.fas,
+        i.fa {
+            color: rgb(206, 165, 235);
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="#" class="nav-elem"><i class="fa fa-fw fa-home"></i>Home</a>
+
+        <div class="dropdown-block">
+            <button class="button-dropdown"><i class="fas fa-address-book"></i>Contacts</button>
+            <div class="dd-content">
+                <a href="#">Phone</a>
+                <a href="#">Fax</a>
+                <a href="#">Address</a>
+                <a href="#">E-mail</a>
+                <a href="#">Contacts</a>
+            </div>
+        </div>
+        <a href="#" class="nav-elem"><i class="fas fa-briefcase"></i></i>Companies</a>
+    </div>
+</body>
+</html>

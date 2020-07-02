@@ -1,0 +1,65 @@
+aside {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20vw;
+}
+
+.adv {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media (min-width: 1501px) {
+  .adv {
+    top: -321px;
+    right: -120px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1500px) {
+  .adv {
+    top: -321px;
+    right: -250px;
+    font-size: 1em;
+  }
+}
+
+.adv a {
+  word-wrap: nowrap;
+  word-break: none;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: blink linear infinite 0.5s;
+          animation: blink linear infinite 0.5s;
+}
+
+@-webkit-keyframes blink {
+  from {
+    background: lightyellow;
+  }
+  to {
+    background: red;
+  }
+}
+
+@keyframes blink {
+  from {
+    background: lightyellow;
+  }
+  to {
+    background: red;
+  }
+}
+/*# sourceMappingURL=aside.css.map */

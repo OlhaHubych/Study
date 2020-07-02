@@ -1,0 +1,18 @@
+$width: 100vw;
+$colorBg: #3F729B;
+$colorTx: white;
+$font-size: 0.5em;
+
+footer {
+    width: $width;
+    min-height: $width*0.02;
+    background: darken($colorBg, 5%);
+    color: $colorTx;
+    font-size: $font-size;
+    text-align: center;
+    padding-top: 5px;
+
+    p {
+        margin-top: 0;
+    }
+}

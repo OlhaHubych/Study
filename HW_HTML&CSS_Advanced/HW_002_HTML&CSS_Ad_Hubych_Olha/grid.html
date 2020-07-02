@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', drawGridHandler, false);
+
+        function drawGridHandler () {
+            let canv = document.querySelector('#canvas');
+            let context = canv.getContext('2d');
+
+            function drawLines(x, y, step, width, height) {
+                while(x < width) {
+                    context.beginPath();
+                    context.moveTo(x, 0);
+                    context.lineTo(x, width);
+                    context.stroke();
+                    x += step;
+                    while(y < height) {
+                        context.beginPath();
+                        context.moveTo(0, y);
+                        context.lineTo(height, y);
+                        context.stroke();
+                        y += step;
+                    }
+                } 
+            }   
+
+            let x = 20,  
+                y = 20,
+                step = 20,
+                delta = canv.width - canv.height;
+            
+            if(delta == 0) {
+                drawLines(x, y, step, canv.width, canv.height);
+            }
+            else if(delta > 0) {
+                let width = canv.width - delta;
+                drawLines(x, y, step, width, canv.height)
+            }
+            else {
+                let height = canv.height + delta;
+                drawLines(x, y, step, canv.width, height)
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="200px" height="400px">
+
+    </canvas>
+</body>
+</html>

@@ -1,0 +1,15 @@
+@mixin line-height($x) {
+    line-height: $x;
+}
+
+@mixin font-size($x) {
+    font-size: $x;
+}
+
+
+@mixin top($x) {
+        top: $x;
+}
+@mixin right($x) {
+   right: $x;
+}

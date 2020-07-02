@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 630px;
+    height: 250px;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 2em 4em;
+    border: 3px solid #bdbdbd;
+    box-shadow: -5px -10px 30px #888888 inset;
+}
+h2 {
+    color: blue;
+    animation: h2 3s ease-in-out infinite alternate;
+    margin: 0 auto;
+    margin-top: 10%;
+    width: fit-content;
+}
+@keyframes h2 {
+    from {color: rgb(0, 132, 255);}
+    to {color:  rgb(13, 11, 156);}
+}
+.xfield, 
+.yfield {
+    width: 250px;
+    height: 30px;
+    border: 3px solid lightseagreen;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 5px;
+    margin-top: 0;
+    outline-color: lightskyblue;
+    flex-grow: 0;
+}
+
+label {
+    color: blue;
+    font-weight: bold;
+}
+.log, .sqrt, .pow, .pow1y {
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    border: 3px solid blue;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 5px;
+    display: none;
+    cursor: pointer;
+    outline: none;
+    flex-grow: 0;
+}
+.log:hover, .sqrt:hover, .pow:hover, .pow1y:hover {
+    background-color: blue;
+    border-color: lightblue;
+    color: white;
+}
+
+.log:active, .sqrt:active, .pow:active, .pow1y:active {
+    background-color: blue;
+    border-color: lightblue;
+    color: white;
+    transform: translateY(3px);
+    
+}
+.all-btns {
+    /* width: 100%; */
+    /* float: left; */
+    display: flex;
+    flex-direction: column;
+}
+.all-inputs {
+    display: flex;
+    flex-direction: column;
+}
+.result {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+h4 {
+    color: blue;
+    font-weight: bold;
+}
+hr {
+   
+    border: 1px dashed lightskyblue;
+    margin: 0;
+}
+p {
+    margin: 0;
+    text-align: center;
+}
+.btn-run {
+    width: 150px;
+    height: 50px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 5px;
+    cursor: pointer;
+    outline: none;
+    flex-grow: 0;
+}
+.btn-run:active, .btn-run:hover {
+    color: white;
+    background-color: blue;
+    text-align: center;
+    border-color: blue;
+}
+
+.btn-run:active {
+    transform: translateY(4px);
+}

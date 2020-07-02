@@ -1,0 +1,24 @@
+$width: 100vw;
+$widthArt: $width*0.8;
+$colorBlack: #020232;
+$colorBeige: beige;
+$padding: 1.2em;
+$border: 0.2em;
+
+article {
+    margin: 0 auto;
+    width: $widthArt;
+    padding: $padding;
+    background-color: lighten($colorBlack, 5%);
+    color: $colorBeige;
+    border: $border dashed $colorBeige;
+    border-radius: 5px;
+    
+    p {
+        text-indent: 1.5em;
+    }
+    hr {
+        border: dashed $border darken($colorBeige, 10%);
+        height: 0;
+    }
+}

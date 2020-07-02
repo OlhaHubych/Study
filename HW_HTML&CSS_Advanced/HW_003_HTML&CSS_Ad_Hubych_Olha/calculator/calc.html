@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+   
+</head>
+<body>
+    <h2>Simple smart calculator</h2>
+    <div class="container">
+        <div class="all-inputs">
+            <label for="number1">X</label>
+            <input type="text" id="number1" value="0" data-pattern="^\d+.?\d*$" class="xfield">
+
+            <label for="number2" id="y-lebel">Y</label>
+            <input type="text" id="number2" value="0" data-pattern="^\d+.?\d*$" class="yfield">
+            <div>
+                <h4>Result:</h4>
+                <p id="result" class="result"></p>
+                <hr>
+            </div>
+            
+        </div>
+    
+        <div class="all-btns">
+            <div>
+                <button id="btn-contr" class="btn-run">X operations</button><br>
+                <button id="btn-op" class="log">log<sub>2</sub>X</button>
+                <button id="btn-op" class="sqrt">X&sup2;</button>
+            </div>
+            <div>
+                <button id="btn-contr" class="btn-run">X and Y operations</button><br>
+                <button id="btn-op" class="pow">X<sup>Y</sup></button>
+                <button id="btn-op" class="pow1y"><sup>Y</sup>&radic;X</button>
+            </div>
+        </div>
+</div>
+   
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

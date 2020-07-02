@@ -1,0 +1,58 @@
+$width: 100vw;
+$colorG: lightgray;
+$colorW: white;
+$colorBlack: #020232;
+$padding: 1.2em;
+$font-size: 1.5em;
+$line-height: 1.5em;
+
+$widthHead: $width* 0.8;
+$colorHead: $colorBlack;
+$widthHalf: floor($widthHead/2);
+$heightHead: $width*0.3;
+
+@import 'mixin';
+
+header {
+    width: $widthHead;
+    height: $heightHead;
+    background: $colorHead;
+    padding: $padding;
+    margin: 0 auto;
+    display: flex;
+    
+    .text-box {
+        width: $widthHalf;
+        height: $heightHead;
+        overflow: hidden;
+        word-wrap: nowrap;
+        text-overflow: ellipsis;
+
+        p {
+            color: $colorW;
+            margin: 0;
+            @media (max-width: 576px) {
+                @include line-height(0.5em);
+                @include font-size(0.5em);
+            } 
+            @media (max-width: 760px) {
+                @include line-height(1em);
+                @include font-size(1em);
+            } 
+            @media (min-width: 761px) {
+                @include line-height($line-height);
+                @include font-size($font-size);
+            } 
+        }
+    }
+    .img-block {
+        width: $widthHead - $widthHalf;
+        background: $colorW;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+        }
+    }
+}

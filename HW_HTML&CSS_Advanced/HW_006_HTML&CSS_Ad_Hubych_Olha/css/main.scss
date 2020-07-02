@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+$colorGreen: #00C851;
+$colorW: white;
+$colorB: #3F729B;
+$font-size: 1em;
+$width: 100vw;
+
+
+@import 'nav';
+@import 'header';
+@import 'article';
+@import 'footer';
+@import 'aside';
+@import 'mixin';
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: transparentize($colorGreen, 0.8);
+    width: $width;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;;
+}
+
+
+

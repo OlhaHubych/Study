@@ -1,0 +1,50 @@
+$width: 100vw;
+$widthAdv: fit-content;
+$heightAdv: fit-content;
+$color: lightyellow;
+$color2: red;
+$font-size: 1em;
+$topPos:  -321px;
+$rightPos: -120px;
+
+@import 'mixin';
+
+aside {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: $width*0.2;
+
+}
+.adv {
+    position: absolute;
+    width: $widthAdv;
+    height: $heightAdv;
+
+    @media (min-width: 1501px) {
+        @include top($topPos);
+        @include right($rightPos);
+        @include font-size($font-size);
+    } 
+    @media (max-width: 1500px) {
+        @include top($topPos);
+        @include right(-250px);
+        @include font-size(1em);
+    } 
+    a {
+        word-wrap: nowrap;
+        word-break: none;
+        margin: 0;
+        padding: 0;
+        animation: blink linear infinite 0.5s;
+        @keyframes blink {
+            from {
+                background: $color;
+            }
+            to {
+                background: $color2;
+            }
+        }
+    }
+
+}

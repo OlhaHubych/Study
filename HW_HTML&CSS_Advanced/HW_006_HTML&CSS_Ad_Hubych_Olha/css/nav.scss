@@ -1,0 +1,36 @@
+$paddingLink: 1.2em;
+$width: 100vw;
+// $widthNav: $width*0.8;
+$colorG: #00C851;
+$colorW: white;
+$colorB: #3F729B;
+
+nav {
+    width: $width;
+    margin: 0 auto;
+
+    div {
+        display: flex;
+        justify-content: center;;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: $colorB;
+
+        a {
+            padding: $paddingLink;
+            user-select: none;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: darken($colorW, 0.8);
+
+            &:hover, 
+            &:active {
+                background: $colorW;
+                color: $colorG;
+            }
+
+        }
+    }
+}
+

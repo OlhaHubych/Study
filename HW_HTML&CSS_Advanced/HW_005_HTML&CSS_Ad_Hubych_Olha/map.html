@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            animation: red-circle 0.5s linear infinite;
+        }
+        @keyframes red-circle {
+            from {
+                background: radial-gradient(rgb(255, 192, 231), red);
+                
+            }
+            to {
+                background: radial-gradient(rgb(255, 0, 234), black);
+                /* opacity: 0.5; */
+            }
+        }
+        .circle1 {
+            left: 72px;
+            top: 211px;
+        }
+        .circle2 {
+            left: 130px;
+            top: 301px;
+        }
+        .circle3 {
+            left: 751px;
+            top: 415px;
+        }
+        .block {
+            position: relative;
+        }
+        
+        .circle3:hover, .circle1:hover, .circle2:hover {
+            animation-play-state: paused;
+        }
+        .popup {
+            display: block;
+            width: fit-content;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(250px);
+            opacity: 0;
+            background-color: rgb(87, 116, 248);
+            color: white;
+            border: 1px dashed blue;
+            margin: 0;
+            padding: 1em;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 3px;
+            visibility: hidden;
+        }
+        
+        .red-circle.circle1:hover .popup,
+        .red-circle.circle2:hover .popup,
+        .red-circle.circle3:hover .popup {
+            transform: translateY(-15px);
+            opacity: 1;
+            visibility: visible;
+        }
+        .img {
+            position: relative;
+            width: 1000px;
+            height: 600px;
+            background-image: url(02.png);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="img">
+        <!-- <img src="02.png" alt="Map"> -->
+        <div class="red-circle circle1">
+            <a href="#" class="popup">Купити квитки</a>
+        </div>
+        <div class="red-circle circle2">
+            <a href="#" class="popup">Купити квитки</a>
+        </div>
+        <div class="red-circle circle3">
+            <a href="#" class="popup">Купити квитки</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', drawFlagHandler, false);
+
+        function drawFlagHandler() {
+            let canv = document.querySelector('#canvas');
+            let context = canv.getContext('2d');
+           
+            function drawShape(ctx, xoff, yoff) {
+                ctx.moveTo(127 + xoff, 118 + yoff);
+                ctx.bezierCurveTo(127 + xoff, 222 + yoff, 366 + xoff, 32 + yoff, 395 + xoff, 116 + yoff);
+                ctx.bezierCurveTo(396 + xoff, 116 + yoff, 397 + xoff, 326 + yoff, 397 + xoff, 311 + yoff);
+                
+                ctx.bezierCurveTo(363 + xoff, 255 + yoff, 138 + xoff, 441 + yoff, 125 + xoff, 307 + yoff);
+                //ctx.bezierCurveTo(125 + xoff, 330 + yoff, 127 + xoff, 102 + yoff, 127 + xoff, 117 + yoff);
+                ctx.stroke();
+            }
+            
+            context.beginPath();
+            drawShape(context, 0, 0);
+            context.closePath();
+            context.lineWidth = 2;
+            context.lineJoin = "round";
+            context.fillStyle = 'red';
+            context.fill();
+            context.strokeStyle = 'gray';
+            context.shadowColor = "rgba(255, 255, 255, 1)";
+            context.shadowOffsetX = 0;
+            context.shadowOffsetY = 0;
+
+            context.clearRect(193, 99, 140, 255);
+            context.save();
+
+            context.translate(210, 255);
+            let flag = new Image();
+            flag.onload = function () {
+                    context.transform(1, -0.3, 0, 1, 0, 0);
+                    context.drawImage(flag, 210, 255, 100, 100);
+
+                    context.shadowColor = "rgba(0, 0, 0, 0.5)";
+                    context.shadowOffsetX = -3;
+                    context.shadowOffsetY = -3;
+                    context.shadowBlur = 5;
+
+                context.stroke();
+                context.closePath();
+                
+            }
+            flag.src = '31.jpg';
+            context.restore();  
+
+            context.font = "bold 35px Segoe UI";
+            context.textBaseline = "alphabetic";
+            let text = "Canada";
+            let textWidth = context.measureText(text);
+            context.fillText(text, (context.canvas.width - textWidth.width) / 2, 420);
+            context.stroke();
+        }
+    </script>
+     <style>
+        canvas {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500px" height="500px">
+
+    </canvas>
+</body>
+</html>

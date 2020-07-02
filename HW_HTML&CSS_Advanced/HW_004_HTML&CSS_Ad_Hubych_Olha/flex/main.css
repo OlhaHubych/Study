@@ -1,0 +1,259 @@
+
+/* root */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    width: 100%;
+    height: 400px;
+    background-image: url("01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.row {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 400px);
+}
+.side-bar {
+    background-color: beige;
+    width: 30%;
+    padding: 15px 20px;
+    color: brown;
+}
+/* header */
+.opacity-block {
+    width: 100%;
+    height: 70px;
+    background-color:rgba(211, 211, 211, 0.5);
+    position: absolute;
+    bottom: 14px;
+    display: flex;
+}
+.black-line {
+    width: 100%;
+    height: 14px;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    display: flex;
+    margin: 0;
+    border: none;
+}
+.header-text {
+    font-size: 15px;
+    color: black;
+    width: 90%;
+    height: 60px;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 17px;
+    
+}
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+}
+.header-btn {
+    width: 10%; 
+}
+.header-text p {
+    margin: 8px 0 0 8px;
+}
+.header-btn button {
+    width: 80px;
+    height: 30px;
+    background-color: brown;
+    border: none;
+    color: white;
+    font-size: 12px;
+    outline: none;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    margin-top: 8px;
+    text-align: center;  
+    cursor: pointer; 
+    display: inline-block;
+}
+span.text-descr {
+    color: brown;
+    font-weight: bold;
+}
+/* main / section / cards */
+.main {
+    background-color: white;
+    width: 70%; 
+}
+.block {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    padding-right: 5px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+.img-block img {
+    width: 100%;
+    height: 100%; 
+    object-fit: scale-down;
+}
+.img-block {
+    width: 30%;
+    padding: 10px 0;
+}
+.text-block {
+    width: 70%;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text-block p {
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 0;
+}
+.line-clamp-16 {
+    display: -webkit-box;
+    -webkit-line-clamp: 16;
+    -webkit-box-orient: vertical;  
+}
+.links {
+    background-color: brown;
+    color: white;
+    font-size: 12px;
+    padding: 5px 8px;
+    
+}
+.links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.mr {
+    margin-right: 10px;
+}
+h2 {
+    color: brown;
+    margin-bottom: 0;
+}
+h2 + p {
+    margin-top: 0;
+    color: gray;
+    font-style: italic;
+    font-size: 13px;
+}
+.card {
+    padding-right: 25px;
+}
+/* aside / form */
+form {
+    width: 100%;
+    display: flex;
+}
+.form-fields, .control-form {
+    width: 50%;
+}
+.side-name{
+    font-size: 16px;
+    margin: 5px 0;
+}
+label {
+    color: black;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+sup {
+    color: brown;
+    font-weight: bold;
+}
+input {
+    margin-bottom: 8px;
+    width: 85%;
+    height: 25px;
+    flex-shrink: 0;
+}
+input:focus{
+    color: lightseagreen;
+    outline-color: lightseagreen;
+}
+.control-form {
+    padding-top: 20px;
+}
+.control-form a {
+    color:brown;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.submit-btn {
+    background-color: brown;
+    color: white;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 10px 0;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+}
+/* aside / navigation */
+details > summary::-webkit-details-marker {
+    color: black;
+    font-size: 14px;
+}
+summary {
+    color: brown;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+details a {
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+}
+details + a::before {
+    content: " ";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-right: 9px;
+}
+details + a {
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    color: brown;
+}
+details {
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 992px) {
+    form {
+        flex-direction: column;
+    }
+    .form-fields, .control-form {
+        width: 100%;
+    }  
+    .header-text {
+        width: 82%;
+    }
+    .header-btn {
+        width: 18%;
+    }
+}

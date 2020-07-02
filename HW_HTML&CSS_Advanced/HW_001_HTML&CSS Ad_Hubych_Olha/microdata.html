@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .block {
+            width: 60%;
+            margin: 0 auto;
+        }
+        .images {
+            width: 100%;
+            height: 250px;
+        }
+        .img1 {
+            width: 20%;
+            height: auto;
+            display: inline-block;
+            object-fit: fill;
+        }
+        .img2 {
+            width: 40%;
+            height: auto;
+            display: inline-block;
+            object-fit: fill;
+        }
+    </style>
+</head>
+<body>
+    <section itemscope itemtype="http://schema.org/EducationalOrganization">
+        <div class="block">
+            <p class="images" itemscope itemtype="http://schema.org/Place">
+                <span itemprop="logo">
+                    <img src="ONPU.gif" alt="ОНПУ" class="img1">
+                </span>
+                <span itemprop="photo">
+                    <img src="02.jpg" alt="Фасад ОНПУ" class="img2">
+                </span>
+            </p>
+
+            <p itemscope itemtype="http://schema.org/Organization">
+                <span itemprop="legalName"><b>Одеський національний політехнічний університет / Odessa National Polytechnic University <br>(Одесский Национальный Политехнический Университет)</b><br> </span>
+                <span itemprop="knowsAbout" style="margin-bottom: 5px;">
+                    Одеський національний політехнічний університет — вищий навчальний заклад у місті Одеса. Створений 18 вересня 1918 року. В ОНПУ навчається близько 20 000 студентів, стажистів, аспірантів і докторантів, 
+                    працює близько 4 000 викладачів, наукових співробітників, інженерно-технічних працівників.
+                </span>
+                <span itemprop="numberOfEmployees"><br><b>Студенти:</b> 20000</span>
+                <span itemprop="founder"><br><b>Ректор:</b> Оборський Геннадій Олександрович</span>
+            </p>
+             
+            <p itemscope itemtype="http://schema.org/PostalAddress">
+                <b>Адреса:</b>
+                <span itemprop="streetAddress">проспект Шевченка, 1, </span>
+                <span itemprop="addressLocality">Oдеса, </span>
+                <span itemprop="addressRegion">Одеська область, </span>
+                <span itemprop="addressCountry">Україна, </span>
+                <span itemprop="postalCode">65044</span>
+                
+            </p>
+
+            <p itemscope itemtype="http://schema.org/PostalAddress/ContactPoint">
+                <span itemprop="email"><b>E-mail:</b> press-centr@opu.ua</span>
+                <span itemprop="telephone"><b>Телефон:</b> +38 (048) 705-84-42</span>
+            </p>
+            <p itemprop="text" itemscope itemtype="http://schema.org/CivicStructure">
+                <time itemprop="openingHours" datetime="Mo-Fr 9:00-18:00"><b>Години роботи:</b> ПН - ПТ з 8:00 до 17:00</time>
+            </p>
+
+            <p itemprop="alumni" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="alumniOf"><b>Випускниця:</b> Губич Ольга</span>
+            </p>
+        </div>
+
+    </section>
+</body>
+</html>
