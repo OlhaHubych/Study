@@ -1,0 +1,36 @@
+<div>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>
+                <details>
+                    <summary>Category</summary>
+                    <ul>
+                        <li><a href="#" class="badge badge-secondary" (click)="showCat('1')">Category 1</a></li>
+                        <li><a href="#" class="badge badge-secondary" (click)="showCat('2')">Category 2</a></li>
+                        <li><a href="#" class="badge badge-secondary" (click)="showCat('3')">Category 3</a></li>
+                        <li><a href="#" class="badge badge-secondary" (click)="showCat('4')">All Category</a></li>
+                    </ul>
+                </details>
+            </th>
+            <th>Button</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let item of WorkingArr" [attr.id]="item.id">
+                <th>{{ item.id }}</th>
+                <td>{{ item.name }}</td>
+                <td [style.color]="item.price > 500 ? 'red': 'black' ">{{ item.price }}</td>
+                <td>{{ item.category }}</td>
+                <td>
+                    <button  type="button" class="btn btn-outline-secondary" (click)="deleteElemInfact(item.id)">Delete</button>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+

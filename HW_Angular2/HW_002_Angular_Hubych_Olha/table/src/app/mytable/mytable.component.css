@@ -1,0 +1,10 @@
+summary {
+    outline: none;
+}
+.list-group-item {
+    padding: 0;
+}
+
+.btn-block button {
+    width: 20%;
+}

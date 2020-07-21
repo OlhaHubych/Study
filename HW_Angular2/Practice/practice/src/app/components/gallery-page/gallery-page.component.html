@@ -1,0 +1,17 @@
+<!-- input - как onchange но только после потери фокуса работает -->
+<input type="text" (input)='filterImgs()' [(ngModel)]="search">
+<hr>
+<app-add-form (addNewPost)="addImgAngTitle($event)"></app-add-form>
+<hr>
+
+<div class="posts">
+    <div *ngFor='let image of items'> 
+        <img [src]="image.url" alt="">
+        <b>{{ image.title }}</b> 
+    </div>
+</div>
+
+
+<!-- <ul>
+    <li *ngFor='let image of items'> {{ image.title }}</li>
+</ul> -->

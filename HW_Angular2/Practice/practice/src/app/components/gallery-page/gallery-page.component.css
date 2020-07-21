@@ -1,0 +1,17 @@
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posts div {
+    width: 50%;
+}
+input {
+    display: block;
+    margin: 20px auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}

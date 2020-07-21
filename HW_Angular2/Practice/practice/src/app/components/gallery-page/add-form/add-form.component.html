@@ -1,0 +1,14 @@
+<form [formGroup]="formAdd" (ngSubmit)="addPost(formAdd.value)">
+    <div class="form-group">
+        URL<input type="text" formControlName="urlImage" [(ngModel)]="url">
+        <br>
+        {{url}}
+        <br>
+        TITLE<input type="text" formControlName="titleText" [(ngModel)]="title">
+        <br>
+        {{title}}
+        <br>
+        <input type="submit" value="Add post">
+    </div>
+    
+</form>

@@ -1,0 +1,13 @@
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.active {
+    background: lightskyblue;
+}
