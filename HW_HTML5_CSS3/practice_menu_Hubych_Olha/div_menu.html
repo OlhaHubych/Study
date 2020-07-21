@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .general {
+            width: 50%;
+            height: 50px;
+            border-left: 8px solid black;
+            padding: 10px;
+            margin: 10px;
+            overflow: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .danger {
+            border-color: red;
+            background-color: lightpink;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+        
+        p  {
+            
+            float: left;
+        }
+
+        .success {
+           border-color: green;
+            background-color: lightgreen;
+        }
+
+        .info {
+            border-color: blue;
+            background-color: lightblue;
+        }
+
+        .warning {
+            border-color: yellow;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="general danger">
+        <p class="bold">Danger! &nbsp;</p>
+        <p>Some text...</p>
+    </div>
+    <div class="general success">
+        <p class="bold">Success!&nbsp;</p> 
+        <p>Some text...</p>
+    </div>
+    <div class="general info ">
+        <p class="bold">Info!&nbsp;</p>
+        <p>Some text...</p>
+    </div>
+    <div class="general warning">
+        <p class="bold">Warning!&nbsp;</p>
+        <p>Some text...</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squares</title>
+    <style>
+        /* Style for squares */
+        div {
+            display: inline-block;
+            margin: 0 8px;
+            width: 100px;
+            height: 100px;
+        }
+        /* Each odd squares are black */
+        div:nth-child(odd) {
+            background-color: black;
+        }
+        /* Each even squares are black */
+        div:nth-child(even) {
+            background-color: blue;
+        }
+        /* If cursor is on some square, it'll have orange color */
+        div:hover {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>    
+</body>
+</html>

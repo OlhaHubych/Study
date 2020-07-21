@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    margin: 0;
+}
+fieldset {
+    width: 1000px;
+    /* height: 200px; */
+    border: 3px solid black;
+    padding: 20px;
+}
+.info {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    width: 49%;
+    float: left;
+}
+.info input {
+   width: 100%;
+}
+.indent {
+    margin-right: 16px;
+}
+.contact {
+    width: 100%;
+    padding-bottom: 15px;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.check {
+    padding-top: 10px;
+}
+.data {
+    padding-bottom: 5px;
+}
+.pay {
+    padding-bottom: 10px;
+}
+.btn {
+    width: 100px;
+    height: 50px;
+    border: 3px solid red;
+    background-color: black;
+    text-transform: uppercase;
+    color:white;
+    border-radius: 5px;
+    display: block;
+    font-size: 14px;
+}
+
+/* Style for checkbox */
+.data input,
+.pay input {
+    display: none; /* delete block of checkbox */
+}
+.label_check::before { /* create own checkbox & put on style for it & place it befor label */
+    content: '';
+    width: 11px;
+    height: 11px;
+    display: inline-block; /* checkbox needs to stand in one line with text in label */
+    margin-right: 5px;
+    border: 1px solid black;
+}
+.data input:checked + .label_check::before,
+.pay input:checked + .label_check::before { /* if input (we've just deleted it but label has connection) is checked 
+                                                    &  our own checkbox is checked = we create new checked-checkbox */
+    width: 11px;
+    height: 11px;
+    background-color: blue;
+    border: 1px  solid black;
+    display: inline-block;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olha Hubych">
+    
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+    <form action="profile.html">
+        <fieldset>
+            <legend>Personal information</legend>
+            
+                <p>
+                    <label class="bold" for="fname"><sup>*</sup>First name:</label>
+                    <input type="text" name="fname" id="fname" required>
+                </p>
+                
+                <p>
+                    <label for="mname">Middle name:</label>
+                    <input type="text" name="mname" id="mname">
+                </p>
+                
+                <p>
+                    <label class="bold" for="lname"><sup>*</sup>Last name:</label>
+                    <input type="text" name="lname" id="lname" required>
+                </p>
+        </fieldset>
+    </form>
+
+    <form action="profile.html">
+        <fieldset>
+            <legend>Address</legend>
+            
+                <p>
+                    <label for="addr">Address:</label>
+                    <input type="text" name="addr" id="addr">
+                </p>
+                
+                <p>
+                    <label for="city">City or Town:</label>
+                    <input type="text" name="city" id="city" list="list_city">
+                    <datalist id="list_city">
+                        <option value="New York"></option>
+                        <option value="Los Angeles"></option>
+                        <option value="Chicago"></option>
+                    </datalist>    
+                </p>
+                
+                <p>
+                    <label for="state">State:</label>
+                        <select name="state" id="state">
+                            <option disabled selected value="state">Choose a State</option>
+                            <option value="NY">New York</option>
+                            <option value="California">California</option>
+                            <option value="Illinois">Illinois</option>
+                        </select>
+                </p>
+
+                <p>
+                    <label class="bold" for="zip"><sup>*</sup>Zip code:</label>
+                    <input type="text" name="zip" id="zip">
+                </p>
+        </fieldset>
+    </form>   
+</body>
+</html>

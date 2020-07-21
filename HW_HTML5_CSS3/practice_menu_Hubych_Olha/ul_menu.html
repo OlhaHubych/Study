@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            list-style-type: none;
+            width: 50%;
+            height: 50px;
+            padding: 10px;
+            margin: 10px;
+            border-left: 8px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-align: left;
+            overflow: auto;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        p {
+            display: inline-block;
+        }
+        .danger  {
+            border-left: 8px solid red;
+            background-color: lightpink;
+        }
+        .success {
+            border-left: 8px solid red;
+            background-color: lightgreen;
+        }
+        .info {
+            border-left: 8px solid blue;
+            background-color: lightblue;
+        }
+        .warning {
+            border-left: 8px solid yellow;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="danger">
+            <p class="bold">Danger!</p>
+            <p>Some text...</p>
+        </li>
+        <li class="success">
+            <p class="bold">Success!</p>
+            <p>Some text...</p>
+        </li>
+        <li class="info">
+            <p class="bold">Info!</p>
+            <p>Some text...</p>
+        </li>
+        <li class="warning">
+            <p class="bold">Warning!</p>
+            <p>Some text...</p>
+        </li>
+    </ul>
+</body>
+</html>

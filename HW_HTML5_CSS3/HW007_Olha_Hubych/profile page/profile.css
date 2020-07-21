@@ -1,0 +1,36 @@
+fieldset {
+    width: 50%;
+    min-height: 100px;
+    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-top: 2px solid lightgrey;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+legend {
+    color: blue;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 30px;
+    margin: 0 20px;
+}
+p {
+    text-align: center;
+    margin: 10px 0;
+}
+label {
+    width: 200px;
+    display: inline-block;
+}
+input, select {
+    width: 150px;
+    border: 2px inset lightgrey;
+}
+sup {
+    font-size: 10px;
+}
+.bold {
+    font-weight: bold;
+}

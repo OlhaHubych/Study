@@ -1,0 +1,29 @@
+fieldset {
+    width: 250px;
+    margin: 0 auto;
+    background-color: #87cefa;
+    color: blue;
+    border-radius: 5px;
+    text-align: center;
+}
+legend {
+    background-color: white;
+    border-radius: 5px;
+}
+input {
+    border-radius: 5px;
+    box-shadow: 0 0 3px blue;
+}
+sup {
+    color:black;
+    font-weight: bold;
+}
+.button {
+    text-align: center;
+    width: 90px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    border: 3px ridge blue;
+    font-size: 12px;
+}

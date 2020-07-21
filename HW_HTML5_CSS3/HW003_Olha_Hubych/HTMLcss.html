@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        body {
+            font-size: 16px;
+            padding: 0 20px;
+            text-align: justify;
+        }
+        h1 {
+            font-size: 2em; /* в два раза бальше чем родитель body */
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        a {
+            color: black;
+        }
+        .a-italic {
+            font-style: italic;
+        }
+        .a-bold {
+            font-weight: bold;
+        }
+        .a-italic-bold {
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>HTML</h1>
+    <div>
+        <p>
+            Язык <strong>HTML</strong> интерпретируется <a href="https://ru.wikipedia.org/wiki/Браузер" target="_blank" title="Браузер">браузерами</a>; 
+            полученный в результате интерпретации форматированный текст отображается на экране монитора компьютера или мобильного устройства. <br>
+            Язык <i>HTML</i> до 5-ой версии определялся как приложение <a href="https://ru.wikipedia.org/wiki/SGML" target="_blank" title="SGML">SGML</a>&nbsp;
+            (стандартного обобщённого языка разметки по стандарту <a href="https://ru.wikipedia.org/wiki/Международная_организация_по_стандартизации" target="_blank" title="ISO">ISO</a> 8879). 
+            Спецификации HTML5 формулируются в терминах <a class="a-italic" href="https://ru.wikipedia.org/wiki/Document_Object_Model" target="_blank" title="DOM">DOM</a>&nbsp;(объектной модели документа). <br>
+            Язык <a class="a-italic" href="https://ru.wikipedia.org/wiki/XHTML" target="_blank" title="XHTML">XHTML</a> является более строгим вариантом HTML, он следует синтаксису 
+            <a href="https://ru.wikipedia.org/wiki/XML" target="_blank" title="XML">XML</a> и является приложением языка XML в области разметки гипертекста. <br>
+            Во всемирной паутине HTML-страницы, как правило, передаются браузерам от сервера по протоколам 
+            <a class="a-italic" href="https://ru.wikipedia.org/wiki/HTTP" target="_blank" title="HTTP">HTTP</a> или <a class="a-italic" href="https://ru.wikipedia.org/wiki/HTTPS" target="_blank" title="HTTPS">HTTPS</a>, 
+            в виде простого текста или с использованием <a href="https://ru.wikipedia.org/wiki/Шифрование" target="_blank" title="Шифрование">шифрования</a>. 
+            </p>
+        <h2>Общее представление</h2>
+        <p>
+            Язык HTML был разработан <a href="https://ru.wikipedia.org/wiki/Великобритания" target="_blank" title="Великобритания">британским</a> учёным <a href="https://ru.wikipedia.org/wiki/Бернерс-Ли,_Тим" target="_blank" title="Тим Бернерс-Ли"><strong>Тимом Бернерсом-Ли</strong></a> 
+            приблизительно в <a class="a-italic" href="https://ru.wikipedia.org/wiki/1986_год" target="_blank" title="1986 год">1986</a>&ndash;<a class="a-italic" href="https://ru.wikipedia.org/wiki/1991_год" target="_blank" title="1991 год">1991 годах</a> в стенах
+            <a class="a-italic" href="https://ru.wikipedia.org/wiki/ЦЕРН" target="_blank" title="ЦЕРН">ЦЕРНа</a> в <a class="a-italic" href="https://ru.wikipedia.org/wiki/Женева" target="_blank" title="Женева">Женеве</a> в 
+            <a class="a-italic" href="https://ru.wikipedia.org/wiki/Швейцария" target="_blank" title="Швейцария">Швейцарии</a>. 
+            HTML создавался как язык для обмена научной и технической документацией, пригодный для использования людьми, не являющимися специалистами в области 
+            <a class="a-italic" href="https://ru.wikipedia.org/wiki/Вёрстка" target="_blank" title="Вёрстка">вёрстки</a>. 
+            HTML успешно справлялся с проблемой сложности SGML путём определения небольшого набора структурных и <a class="a-bold" href="https://ru.wikipedia.org/wiki/Семантика" target="_blank" title="Семантика">семантических</a> элементов — дескрипторов. 
+            Дескрипторы также часто называют <a class="a-italic" href="https://ru.wikipedia.org/wiki/Тег_(языки_разметки)" target="_blank" title="Тег"><strong>«тегами»</strong></a>. С помощью HTML можно легко создать относительно простой, но красиво оформленный документ. 
+            Помимо упрощения структуры документа, в HTML внесена поддержка <a class="a-italic" href="https://ru.wikipedia.org/wiki/Гипертекст" target="_blank" title="Гипертекст">гипертекста</a>. 
+            <a class="a-italic" href="https://ru.wikipedia.org/wiki/Мультимедиа" target="_blank" title="Мультимедиа">Мультимедийные</a> возможности были добавлены позже. <br>
+            Изначально язык HTML был задуман и создан как средство структурирования и форматирования документов без их привязки к средствам воспроизведения&nbsp;(отображения). 
+            В идеале, текст с разметкой HTML должен был без стилистических и структурных искажений воспроизводиться на оборудовании с различной технической оснащённостью&nbsp;(цветной экран современного компьютера, 
+            монохромный экран органайзера, ограниченный по размерам экран мобильного телефона или устройства и программы голосового воспроизведения текстов). 
+            Однако современное применение HTML очень далеко от его изначальной задачи. Например, тег &lt;table&gt; предназначен для создания в документах таблиц, но иногда используется и для оформления размещения элементов на странице. 
+            С течением времени основная идея платформо независимости языка HTML была принесена в жертву современным потребностям в мультимедийном и графическом оформлении. <br>
+            Браузеры<br>
+            Текстовые документы, содержащие разметку на языке HTML&nbsp;(такие документы традиционно имеют <a class="a-italic" href="https://ru.wikipedia.org/wiki/Расширение_имени_файла" target="_blank" title="Расширение имени файла">расширение</a> <strong>.html</strong> или <strong>.htm</strong>), 
+            обрабатываются специальными <a class="a-italic" href="https://ru.wikipedia.org/wiki/Прикладное_программное_обеспечение" target="_blank" title="Прикладное программное обеспечение">приложениями</a>, 
+            которые отображают документ в его форматированном виде. Такие приложения, называемые «браузерами» или «интернет-обозревателями», обычно предоставляют пользователю удобный 
+            <a class="a-italic" href="https://ru.wikipedia.org/wiki/Интерфейс_пользователя" target="_blank" title="Интерфейс пользователя">интерфейс</a> для запроса <a class="a-italic" href="https://ru.wikipedia.org/wiki/Веб-страница" target="_blank" title="Веб-страница">веб-страниц</a>, 
+            их просмотра&nbsp;(и вывода на иные внешние устройства) и, при необходимости, отправки введённых пользователем данных на сервер. 
+            Наиболее популярными на сегодняшний день браузерами являются 
+            <a class="a-italic-bold" href="https://ru.wikipedia.org/wiki/Google_Chrome" target="_blank" title="Google Chrome">Google Chrome,</a> 
+            <a class="a-italic-bold" href="https://ru.wikipedia.org/wiki/Mozilla_Firefox" target="_blank" title="Mozilla Firefox">Mozilla Firefox,</a>  
+            <a class="a-italic-bold" href="https://ru.wikipedia.org/wiki/Opera" target="_blank" title="Opera">Opera,</a> 
+            <a class="a-italic-bold" href="https://ru.wikipedia.org/wiki/Internet_Explorer" target="_blank" title="Internet Explorer">Internet Explorer</a> и 
+            <a class="a-italic-bold" href="https://ru.wikipedia.org/wiki/Safari" target="_blank" title="Safari">Safari</a>.
+        </p>
+    </div>
+</body>
+</html>

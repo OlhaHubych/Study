@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olha Hubych"> 
+    
+    <title>Form</title>
+    <link rel="stylesheet" href="formStyle.css">
+</head>
+
+<body>
+    <form action="#" method="GET">
+        <fieldset>
+            <div class="container">
+                <div class="contact clearfix">
+                    <div class="info indent">
+                        <label for="phone">Phone</label><br>
+                        <input type="tel" name="phone" id="phone" placeholder="Введите телефон">
+                    </div>
+                    <div class="info">
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" id="email" placeholder="Введите email">
+                    </div>
+                </div>
+
+                <div class="data">
+                <input type="checkbox" name="data_proc" id="data_proc">
+                <label class="label_check" for="data_proc">Согласен на обработку моих данных</label>
+                </div>
+
+                <div class="pay">
+                <input type="checkbox" name="pay_card" id="pay_card">
+                <label class="label_check" for="pay_card">Оплата картой</label>
+                </div>
+
+                <button class="btn">Заказать</button>
+
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

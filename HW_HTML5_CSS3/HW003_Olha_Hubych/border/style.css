@@ -1,0 +1,28 @@
+p  {
+    border-color: green;
+    border-width: 8px;
+}
+.p-border-solid {
+    border-style: solid;
+}
+.p-border-dashed {
+    border-style: dashed;
+}
+.p-border-dotted {
+    border-style: dotted;
+}
+.p-border-groove {
+    border-style: groove;
+}
+.p-border-double {
+    border-style: double;
+}
+.p-border-ridge {
+    border-style: ridge;
+}
+.p-border-inset {
+    border-style: inset;
+}
+.p-border-outset {
+    border-style: outset;
+}
