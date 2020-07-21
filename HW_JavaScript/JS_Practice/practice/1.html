@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        4
+        // Задача 3
+		
+		// есть массив в котором числа например
+		const arr1 = [2,4,6,8,10];
+		const arr2 = [2,4,6,8,9,10];
+		// переменная ответа
+		
+		// прописать логику в котором идет проверка на наличие не четных чисел 
+
+		// console.log(false) в случае проверки arr1 (нет, ни одно не четного числа в массиве)
+		// console.log(true) в случае проверки arr2 (да, хотя бы одно число в массиве не четное)
+        */
+
+        const arr1 = [2,4,6,8,10];
+		const arr2 = [3,4,6,8,9,10];
+        let result = false;
+
+        //-----------------------------------------------------
+        function oddElement(some_array) {
+                for(let i = 0; i < some_array.length; i++) {
+                if((some_array[i] % 2) == 1) {
+                    result = true;
+                    return result;
+                }
+            }
+        }
+        
+        function showResult(res) {
+            if(res) document.write("В массиве есть нечетные числа");
+            else document.write("В массиве нет нечетных чисел");
+        }
+        //--------------------------------------------------------
+
+        result = oddElement(arr1);
+        showResult(result);
+
+        
+
+
+       
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

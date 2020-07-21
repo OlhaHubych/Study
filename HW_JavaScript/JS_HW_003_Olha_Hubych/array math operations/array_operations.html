@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+
+        //create an array
+        let array = new Array(5);
+
+        //fill it with random values
+        for(var i = 0; i < array.length; i++) {
+            array[i] = Math.ceil(Math.random() * 10); //random value between 0-10, ceil - round up to a whole number
+        }
+
+        //show the array
+        document.write("Array with random numbers: "+ array.join(' | '));
+
+        //find the max value
+        let max = Number.NEGATIVE_INFINITY;
+        for(var j = 0; j < array.length; j++) {
+            if (array[j] > max)
+                max = array[j];
+        }
+        document.write("<br> Max value = " + max);
+
+        //find the min value
+        let min = Number.POSITIVE_INFINITY
+        for(var k = 0; k < array.length; k++) {
+            if (array[k] < min) 
+                min = array[k];
+        }
+        document.write("<br> Min value = " + min);
+
+        //find the sum
+        let sum = 0;
+        for(var s = 0; s < array.length; s++) {
+            sum += array[s];
+        }
+        document.write("<br> Sum = " + sum);
+
+        //find the average
+        let aver = sum / array.length;
+        document.write("<br> Average = " + aver);
+
+        //find the odd numbers - nch
+        let temp = false;
+        let tempArray = new Array();
+        for(var o = 0; o < array.length; o++) {
+            if (array[o] % 2 == 1) {
+                temp = true;
+                tempArray.push(array[o]);
+            }
+        }
+        //if array has odd numbers - show them
+        if (temp) { 
+            document.write("<br> Odd numbers: " + tempArray.join(' | '));
+        }
+        //if array doesn't have - show empty massage
+        else document.write("<br> Odd numbers = empty");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

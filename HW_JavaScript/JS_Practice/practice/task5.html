@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        // Задача 5
+
+		// Есть массив чисел например [-3, 5] или [2,9], нужно заполнить пропущенные значения между цифрами. 
+		// Результат [-3,-2,-1,0,1,2,3,4,5], [2,3,4,5,6,7,8,9]; 
+
+		// 5.1 Пропишите вывод текста при случии если первое значение больше второго и код не работает
+
+		// 5.2 Убрав реализацию описания пункта выше (5.1) пропишите логику на оба варианта получения чисел, 
+        просто в случае [4, -1] результатом будет 4,3,2,1,0,-1 (можно прописать и на оборот -1,0,1,2,3,4)
+        */
+
+        /*
+            --------------------- define functions --------------------
+        */
+
+        function countArrayElementRight(arr) {
+            let start = arr[0];
+            let finish = arr[arr.length - 1];
+
+            let temp_result = countElementByIndex(start, finish);
+           
+            let cut_temp_result = temp_result.slice(1);
+            arr.splice(1,0, cut_temp_result); 
+
+            return arr;
+        }
+
+        function countArrayElementReverse(arr) {
+            let start = arr[arr.length - 1];
+            let finish = arr[0];
+
+            let temp_result = countElementByIndex(start, finish);
+        
+            let cut_temp_result = temp_result.slice(1);
+        
+            cut_temp_result.reverse();
+            arr.splice(1,0, cut_temp_result); 
+
+            return arr;
+        }
+        // additional function
+        function countElementByIndex(start, end) {
+            let temp_array = [];
+        
+            for(let i = start; i < end; i++) {
+                temp_array.push(i);
+            }
+            console.log(temp_array);
+            return temp_array;
+        }
+
+        // show-result function
+        let show_array = function (input_array) {
+            let show_user_array;
+            document.write("Begin: [" + input_array + "]<br>");
+
+            if(input_array[0] == input_array[input_array.length - 1]) {
+                show_user_array = input_array;
+                document.write("Result: [" + show_user_array + "]");
+            }
+            else if(input_array[0] < input_array[input_array.length - 1]) {
+                show_user_array = countArrayElementRight(input_array);
+                document.write("Result: [" + show_user_array + "]");
+            }
+            else {
+                show_user_array = countArrayElementReverse(input_array);
+                document.write("Result: [" + show_user_array + "]");
+            } 
+        }
+        
+        /*
+        ------------------------------- MAIN -----------------------------
+        */
+        show_array([-4, 0]);
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

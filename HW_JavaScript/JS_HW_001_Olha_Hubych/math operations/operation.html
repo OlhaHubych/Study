@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations</title>
+    <script>
+        document.write("Начальные значения переменных: <br>")
+        let x = 6;
+        let y = 15;
+        let z = 4;
+
+        document.write("x = " + x + "<br>");
+        document.write("y = " + y + "<br>");
+        document.write("z = " + z + "<br>");
+        document.write("<hr>");
+
+        x += y - x++ * z; //x = 6 + 15 - 6(++ сработает после операции)* 4 = -3
+        document.write("Выражение: <br> x += y - x++ * z <br>" + "x = " + x + "<br>");
+
+        z = --x - y * 5; //z = -4 (выше изменили значение х)- 15 * 5 = - 79  
+        document.write("Выражение: <br> z = --x - y * 5 <br>" + "z = " + z + "<br>");
+
+        y /= x + 5 % z; // y = 15/(-4 + 5(= 5%-79)) = 15
+        document.write("Выражение: <br> y /= x + 5 % z <br>" + "y = " + y + "<br>");
+
+        z = x++ + y * 5; //-4+15*5=71
+        document.write("Выражение: <br> z = x++ + y * 5 <br>" + "z = " + z + "<br>");
+
+        x = y - x++ * z; //15-(-3 * 71) = 15 - -213 = 228
+        document.write("Выражение: <br> x = y - x++ * z <br>" + "x = " + x + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

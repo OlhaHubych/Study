@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            // Задача 6
+
+		// 6.1 Написать функцию в которую возможно передать любое количество чисел и эта функция возращает сумму этих всех чисел.
+		// 6.2 Все тоже самое но с умножением (помним по умножить на ноль), в таком случае программа ноль игнорирует и не превращает результат в 0
+
+		// f(2,3,0,4,0)
+		// 24
+        */
+        //------------------------- define function --------------------
+        let countSumElements = function (f_number, s_number, t_number) {
+            let sum = 0;
+            for(let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        let countMulElements = function () {
+            let mul = 1;
+            for(let i = 0; i < arguments.length; i++) {
+                if(arguments[i] == 0) continue;
+                else mul *= arguments[i];
+            }
+            return mul;
+        }
+        let show = function (callbackfunction, a, b) {
+            let result = callbackfunction(a, b);
+            document.write(result);
+        }
+
+        //------------------------- main --------------------------------
+        let mul_result = countMulElements(2, 3, 0, 4, 0);
+        document.write("MUL = " + mul_result);
+
+        let sum_result = countSumElements(2, 3, 0, 4, 0);
+        document.write("<br>SUM = " + sum_result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

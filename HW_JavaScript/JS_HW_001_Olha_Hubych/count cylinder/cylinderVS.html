@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цилиндр</title>
+    <script>
+        alert("Посчитаем объем цилиндра и его площадь поверхности?");
+
+        let r = +prompt("Задайте радиус цилиндра в метрах r = ");
+        let h = +prompt("Задайте высоту цилиндра в метрах h = ");
+        let V = Math.PI * r*r * h;
+        let S = 2 * Math.PI * r * (r + h);
+
+        document.write("Вы ввели значения: <i> r = " + r + " m, h = "  + h + " m</i><br>");
+        document.write("Объем цилиндра расчитывается по формуле: <i> V = &pi; &times; r<sup>2</sup> &times; h </i> <br>");
+        document.write("<i> V = " + V.toFixed(2) + " m  <sup>3</sup></i><br>");
+
+        document.write("Площадь поверхности цилиндра высчитывается по формуле: <i> S = 2 &times; &pi; &times; r &times; h + 2 &times; &pi; &times; r <sup>2</sup></i> <br>");
+        document.write("<i> S = " + S.toFixed(2) + " m  <sup>2</sup></i><br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

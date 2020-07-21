@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            // Задача 4 
+
+		// Есть массив и число в переменной 'N'
+		// Число 'N' это индекс элемента с которого нужно взять число, а потом взятое число умножить на 'N' раз 
+
+		var arr = [4,2,3,5,2];
+		var N   = 4;
+		// если N = 2 тогда
+		// 3 * 3
+		// console.log(9);
+
+		// если N = 3 тогда
+		// 5  5  5
+		// console.log(125);
+
+		// если N = 4 тогда
+		// 2  2  2 * 2
+		// console.log(16);
+        */
+        let arr = [4,2,3,5,2];
+		let n   = 2;
+        let mul = 1;
+
+        //легкий ваш вариант
+        // for(let i = 0; i < n; i++) {
+        //     mul *= arr[n];
+        // }
+        // document.write(mul);
+
+        //мой сложный :)
+        for(let i = 0; i < arr.length; i++) {
+            if(i == n) {
+                let count = 1;
+                while(count <= n) {
+                    mul *= arr[i]; 
+                   count++;
+                }
+                document.write(mul);
+                break;
+            }
+        }
+        
+
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

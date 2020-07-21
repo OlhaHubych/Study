@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с числами А и В</title>
+    <script>
+
+        alert("Строгое условие работы с числами: А < В");
+
+        let a = parseInt(prompt("Число А должно быть меньше В. Введите число A:"));
+        let b = parseInt(prompt("Число В должно быть больше А. Введите число В:"));
+        let sum = 0;
+        
+        document.write("Вы ввели числа А = " + a + ", B = " + b + "<br>");
+
+        if (a < b) { //проверка на строгое соответствие условию
+            document.write("Нечетные числа в промежутке от А = " + a + " до В = " + b + " следующие: <br>");
+            for(var i = a; i <= b; i++) {
+                sum = sum + i; //подсчет суммы
+                if (i%2 != 0)  { //поиск нечетных чисел
+                    document.write(i + "<br>");
+                }
+            }
+            document.write("Сумма чисел между А и В составляет: " + sum + "<br>"); 
+        }
+        else {
+            document.write("Введенные числа А и В не соответствуют начальному условию: А < В. <br> Работа с числами невозможна.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

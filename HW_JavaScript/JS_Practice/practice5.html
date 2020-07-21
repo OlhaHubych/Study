@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 2.1 Написать ФУНКЦИЮ которая, принимает три параметра(имя, фамилия, возраст) и возращает такую строку (результат работы функции можна записать в переменную):
+		// Это "Фамилия" "Имя" ему "возраст " лет.
+
+		// greating('Иванов', 'Петр', '25') 
+		// Результат: Это Иванов Петр ему 25 лет.
+		// greating('Сидоров', 'Иван', '17') 
+		// Результат: Это Сидоров Иван ему 17 лет.
+
+        function greating(last_name, first_name, age) {
+            return "Это " + last_name + " " + first_name + " ему " + age + " лет.";
+        }
+
+        let count;
+        let res_info = []; 
+
+        do {
+            let person_lname = prompt("Введите Фамилию человека");
+            let person_fname = prompt("Введите Имя человека");
+            let person_age = +prompt("Введите возраст человека");
+            
+            if((person_age <= 0) || (person_age > 110)) {
+                document.write(person_age + " - такой возраст невозможен. Введенные данные по этому человеку анулировались.<br>");
+                break;
+            }
+
+            res_info.push(greating(person_lname, person_fname, person_age));
+            count = confirm("Продолжить ввод?");
+
+        } while (count != 0);
+
+        document.write(res_info.join("<br>"));
+        document.write("<br>До свидания!");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let res = 0;
+        //declare functions
+        function add(a, b) {
+            res = a + b;
+            document.write(a + " + " + b + " = " +  res);
+        }
+        function sub(a, b) {
+            res = a - b;
+            document.write(a + " - " + b + " = " +  res);
+        }
+        function mul(a, b) {
+            res = a * b;
+            document.write(a + " * " + b + " = " +  res);
+        }
+        function div(a, b) {
+            if (b == 0) {
+                document.write("A = " + a + "<br>" + "B = " + b +  "<br>" + "На 0 делить нельзя!");
+            }
+            else {
+                res = a / b;
+                document.write(a + " / " + b + " = " +  res);
+            }
+        }
+
+        //main
+        let first_number = +prompt("Введите число А");
+        let operation = prompt("Выберите арифметическую операцию: + , - , * , /");
+        let second_nember = +prompt("Введите число В");
+
+        switch(operation) {
+            case "+" : add(first_number, second_nember);
+                        break;
+
+            case "-" : sub(first_number, second_nember);
+                        break;
+
+            case "*" : mul(first_number, second_nember);
+                        break;
+
+            case "/" : div(first_number, second_nember);
+                        break;
+
+            default: document.write(operation + " - такая операция невозможна!");   
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

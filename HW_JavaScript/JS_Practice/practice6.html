@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            через привязку переменных вывести в тело документа то что показано на скрине, 
+            если в коде я меняю значение переменной к примеру "а" на 13 весь вывод на это реагирует
+            Дано:
+            а = 10;
+            в  = 20;
+            с;
+            с = 10(а) + 20(в) = 30;
+            Відповідь: с = 30;
+        */
+
+        //---------------------------------------------------------------------------------
+        function sum(first_parameter, second_parameter) {
+            return first_parameter + second_parameter;
+        }
+        function show(callbackfunction, a, b) {
+            document.write("Дано:");
+            document.write("<br>a = ", a + ";");
+            document.write("<br>b = " + b + ";");
+            document.write("<br>c;");
+            rez = callbackfunction(a, b);
+            document.write("<br> c = " + a + "(a)" + " + " + b + "(b)" + " = " + rez + ";");
+            document.write("<br>Відповідь: с = " + rez + ";");
+        }
+        //----------------------------------------------------------------------------------
+
+        show(sum, 10, 20);
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

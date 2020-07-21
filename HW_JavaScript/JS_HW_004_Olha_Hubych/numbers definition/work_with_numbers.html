@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function workWithNumbers(number) {
+            //--- declare inner functions ---
+
+            //positive or negative
+            let identifySignOfNumber = function () {
+                if(number >= 0) {
+                    document.write("<p>Number " + number +" is positive.</p>");
+                }
+                else {
+                    document.write("<p>Number " + number +" is negative.</p>");
+                }
+            }
+            //prime number - only (number/1 && nunber/number)
+            let identifyNumberIsPrime = function () {
+                if(number == 1) {
+                    document.write("<p>Number 1 isn't a Prime number.</p>");
+                }
+                else if(number > 1) {
+                    if(number == 2) {
+                        document.write("<p>Number 2 is a Prime number.</p>");
+                    }
+                    else if((number % 1 == 0) && (number % number == 0) && !(number % 2  == 0)) {
+                        document.write("<p>Number " + number + " is Prime number.</p>");
+                    }
+                    else document.write("<p>Number " + number + " isn't a Prime number.</p>");
+                }
+                else document.write("<p>Number " + number + " isn't a Prime number.</p>");
+            } 
+
+            //division by 2, 5, 3, 6, 9
+            let identifyDivisionByNumbers = function () {
+                if((number % 2 == 0) && (number % 5 == 0) && (number % 3 == 0) && (number % 6 == 0) && (number % 9 == 0)){
+                    document.write("<p> Number " + number + " has integer division by 2, 5, 3, 6, 9 at the same time.")  
+                }
+                else document.write("<p> Number " + number + " has no integer division by 2, 5, 3, 6, 9 at the same time.")
+                
+                document.write("<p style='padding-left: 10px;'");
+                if(number % 2 == 0) document.write("<br>But " + number + " has integer division by 2.");
+                if(number % 5 == 0) document.write("<br>But " + number + " has integer division by 5.");
+                if(number % 3 == 0) document.write("<br>But " + number + " has integer division by 3.");
+                if(number % 6 == 0) document.write("<br>But " + number + " has integer division by 6.");
+                if(number % 9 == 0) document.write("<br>But " + number + " has integer division by 9.");
+                document.write("</p>");
+            }
+
+            //--- call inner functions ---
+            identifySignOfNumber(number);
+            identifyNumberIsPrime(number); 
+            identifyDivisionByNumbers(number); 
+
+        }
+
+        //main 
+        let user_number = +prompt("Please enter any number to get information about it:");
+        workWithNumbers(user_number);
+
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

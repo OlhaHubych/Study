@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure</title>
+    <script>
+
+        /* Прямоугольник
+        00 01 02 03 04 05 06 07 08 09
+        10 11 12 13 14 15 16 17 18 19
+        20 21 22 23 24 25 26 27 28 29
+        30 31 32 33 34 35 36 37 38 39
+        40 41 42 43 44 45 46 47 48 49
+        */
+        for(var i = 0; i < 5; i++) {//ряд
+            for(var j = 0; j < 10; j++) {//ячейка
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+        document.write('<hr>');
+
+        /*  Прямоугольный треугольник
+        00
+        10 11
+        20 21 22
+        30 31 32 33
+
+        В первом ряду вывести одну звезду,
+        Во втором ряду - 2
+        В третьем - 3
+        Т.е. какой ряд, столько и звезд выводим
+
+        Выводим ряд и одну звезду во внутр цикле, выводим второй ряд и две звезды во внутреннем цикле и тд
+        */
+        for(var l = 0; l < 10; l++) {
+            for(var k = 0; k <= l; k++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+        document.write('<hr>');
+
+        /* Равносторонний треугольник 
+        Рисуем прямоугольник h = 7 w = 8
+        Для равностороннего треугольника зарисовываем ненужные эл-ты
+        00 01 02 03 04 05 06 07
+        10 11 12 * * 15 16 17
+        20 21 22 * * 25 26 27
+        30 31  * * * *  36 37
+        40  *  * * * *   * 47
+        50  *  * * * *   * 57
+        *   * * * * *    *  *
+
+        */
+        document.write('<div>')
+        for(var n = 1; n < 7; n++) {
+            for(var k = 0; k < 8; k++) {
+                if ((n==1 || n==2) && (k==0 || k==1 || k==2 || k==5 || k==6 || k==7)) document.write('&nbsp;');
+                else if ((n==3 || n==4) && (k==0 || k==1 || k==6 || k==7)) document.write('&nbsp;');
+                else if (n==5 && (k==0 || k==7)) document.write('&nbsp;');
+                else document.write('&lowast;');
+            }
+           document.write('<br>');
+        }
+        document.write('</div>');
+        document.write('<hr>');
+        
+        /* Ромб
+        В квадрате заполняем только нужные эл-ты
+
+            00 01 * * 04 05
+            10  * * * *  15
+             *  * * * *  *
+             *  * * * *  *
+            40  * * * *  45
+            50 51 * * 54 55
+
+        */
+        document.write('<div>')
+        for(var s = 0; s < 6; s++) { //рисуем кадрат 6х6
+            for(var m = 0; m < 6; m++) {
+                if (s==0 && (m ==0 || m==1 || m==4 || m==5)) document.write('&nbsp;');
+                else if (s==1 && (m==0 || m==5)) document.write('&nbsp;');
+                else if (s==4 && (m==0 || m==5)) document.write('&nbsp;');
+                else if (s==5 && (m==0 || m==1 || m==4 ||  m==5)) document.write('&nbsp;')
+                else  document.write('*');
+            }
+            document.write('<br>');
+        }
+        document.write('</div>');
+        document.write('<hr>');
+
+    </script>
+
+    <style>
+        div {
+            width: 150px;
+            height: 130px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

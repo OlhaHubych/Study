@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* Пользователь вводит в текстовое поле время в часах (например 18). 
+        Если время больше 17, то выводится сообщение «Добрый вечер». В любых других случаях — «Добрый день».*/
+
+        let user_time = +prompt("Введите время в часах");
+
+        if((user_time >= 1)  && (user_time  <= 11)) document.write("Доброе утро!");
+        else if((user_time >= 12) && (user_time < 17)) document.write("Добрый день!");
+        else if((user_time >=  17) && (user_time < 22)) document.write("Добрый вечер!");
+        else if((user_time >= 22) && (user_time <=24)) document.write("Доброй ночи!");
+        else document.write("Такого времени не  существует. Используйте 24-часовой формат времени.");
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

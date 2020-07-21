@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+    <script>
+
+        let doc = {
+            header: "Steps to help prevent the spread of COVID-19 if you are sick",
+            body: ["<b>Stay home:</b> People who are mildly ill with COVID-19 are able to recover at home. Do not leave, except to get medical care. Do not visit public areas.", 
+                    "<b>Stay in touch with your doctor</b>. Call before you get medical care. Be sure to get care if you feel worse or you think it is an emergency.",
+                    "<b>Avoid public transportation:</b> Avoid using public transportation, ride-sharing, or taxis."],
+            footer: "Call your doctor:  If you think you have been exposed to COVID-19 and develop a fever and symptoms, such as cough or difficulty breathing, call your healthcare provider for medical advice.",
+            data: "20 March 2020",
+            details: {
+                header: "Wear a facemask if you are sick",
+                body: ["You should wear a facemask when you are around other people and before you enter a healthcare provider’s office.",
+                        "If the person who is sick is not able to wear a facemask (for example, because it causes trouble breathing), then people who live in the home should stay in a different room. When caregivers enter the room of the sick person, they should wear a facemask. Visitors, other than caregivers, are not recommended."],
+                footer: "https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html",
+            },
+
+            show_data:function() {
+                document.write("<span style='font-style:italic'>News " + this.data + "</span>");
+            },
+
+            show_main_header:function() {
+                document.write("<h1 style='color: green'>" + this.header + "</h1>");
+            },
+            show_main_text:function()  {
+                document.write("<p><ul style='text-align: left;'><li>" + this.body[0] + "</li>");
+                    document.write("<li>" + this.body[1] + "</li>");
+                    document.write("<li>" + this.body[2] + "</li>");
+                document.write("</ul>");
+            },
+
+            show_datails_header:function() {
+                document.write("<h2 style='color:red;'>Important information: " + this.details.header + "</h2>");
+            },
+            show_datails_text:function() {
+                document.write("<p><ul style='list-style-type: square; text-align: left;'><li>" + this.details.body[0] + "</li>");
+                    document.write("<li>" + this.details.body[1] + "</li>");
+                document.write("</ul>");
+            },
+
+            show_datails_footer:function() {
+                document.write("<br><b>More information:</b> <a target =_blank href = > " + this.details.footer + "</a>");
+            },
+            show_main_footer:function() {
+                document.write("<p style='color:red; font-size:18px'><b>" + this.footer + "</b></p>");
+            }   
+        }
+
+        doc.show_data();
+        doc.show_main_header();
+        document.write("<p><img src = 'mask.jpeg' width = 700px height = 500px></p>"); 
+        doc.show_main_text();
+        doc.show_datails_header();
+        doc.show_datails_text();
+        doc.show_datails_footer();
+        document.write("<p><img src = 'hand.gif'></p>");
+        doc.show_main_footer();
+
+    </script>
+</head>
+<body style="text-align: center;">
+    
+</body>
+</html>

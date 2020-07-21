@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* через prompt - Пользователь вводит 3 числа. 
+        Из этих чисел найти максимальное и выдать сообщение какое из найбольшее. 
+        Учесть вариант равенства чисел. */
+
+        let array =  new Array();
+        let count = 3
+
+        do {
+            let operand = +prompt("Введите число:");
+            array.push(operand);
+            console.log(array);
+            count--;
+        } while(count > 0)
+        
+        let max = array[0];
+        let sum = 0;
+        for(let i = 0; i < array.length; i++) {
+            if(max < array[i+1]) {
+                max = array[i+1];
+            }
+            sum += array[i];
+        }
+       document.write(array);
+       document.write("<br> Max = " + max);
+       document.write("<br>Sum = " + sum);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

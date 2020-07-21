@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //define the objects
+        let menager = {
+            first_name: "Sarah",
+            last_name: "Connor",
+            age: 35,
+            experience: 5,
+            sex: "female",  
+        };
+
+        let secretary = {
+            first_name: "James",
+            last_name: "Bond",
+            age: 55,
+            experience: 10,
+            sex: "male",
+        };
+
+        //create a show-function
+        let showInfo = function () {
+            document.write("<p>Sex: " + this.sex + "<br>My name is " +  this.first_name + " " + this.last_name
+            + ". I'am " + this.age + " years old. <br>" + " My work experience is " + this.experience + " years.");
+        }
+
+        //add this function-method in the objects
+        menager.introduce = showInfo;
+        secretary.introduce = showInfo;
+
+        //call the methods
+        menager.introduce();
+        secretary.introduce();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
