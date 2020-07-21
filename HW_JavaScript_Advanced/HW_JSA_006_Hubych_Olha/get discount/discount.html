@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+    </style>
+    <script>
+        //set up window load handler
+        window.addEventListener('load', init);
+
+        //handler for window
+        function init () {
+            //get button
+            let btnDiscount = document.querySelector('#btnDiscount');
+            //set up handler for button
+            btnDiscount.addEventListener('mouseover', handlerOverBtnDiscount);
+        }
+
+        //handler for button
+        function handlerOverBtnDiscount (e) {
+            //difine steps   
+            let stepX = Math.ceil(Math.random() * 10)*2;
+            console.log(stepX);
+            let stepY = Math.ceil(Math.random() * 10)*2;
+            console.log(stepY);
+            
+            // set up steps between mouse pointer and button    
+            btnDiscount.style.left = e.clientX + stepX + "px";
+            btnDiscount.style.top = e.clientY + stepY + "px";       
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Get discount" id="btnDiscount">
+</body>
+</html>

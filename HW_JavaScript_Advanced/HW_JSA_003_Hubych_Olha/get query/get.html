@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            //================================ definition ====================================
+            //difine function to parse GET part of URL
+            let getQueryResult = function () {
+
+                //create empty object to store pairs of query
+                let queryResult = {};
+
+                //?a=100&b=200
+                let query = location.search.substring(1); //a=100&b=200
+                let arrPairs = query.split("&"); //[a=100, b=200]
+
+                for(let i = 0; i < arrPairs.length; i++) {
+                    let index = arrPairs[i].indexOf("="); //looking for index '='
+                    if(index == -1) continue; //if char isn't '=' continue put
+
+                    //[a, b]
+                    let key = arrPairs[i].substring(0, index);
+                    //[100, 200]
+                    let value = arrPairs[i].substring(index + 1);
+                    //{a:100, b: 200}
+                    queryResult[key] = value;
+                    }
+                console.log(queryResult);
+                return queryResult;
+            }
+
+            // ================================ main =====================================
+            window.onload = function () {
+                let queryResult = getQueryResult(); //{a:100, b: 200}
+
+                let newElem = document.createElement('p'); //create paragraph to  show the result
+
+                //show result. 
+                //use parseInt to change type string to integer becouse of '+': str+str = str; int+int = int
+                newElem.textContent = `a = ${queryResult.a}, b = ${queryResult.b}. a + b = ${parseInt(queryResult.a) + parseInt(queryResult.b)}`;
+                document.body.append(newElem);
+            }
+    </script>
+</head>
+<body>
+  
+</body>
+</html>

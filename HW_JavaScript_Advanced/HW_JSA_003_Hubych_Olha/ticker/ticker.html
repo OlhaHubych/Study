@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onclick = function () {
+            let button = document.getElementById("butSend");
+
+            button.onclick = function () {
+                let text = document.getElementById("textField").value;
+                console.log(text);
+
+                let newField = document.getElementById("newText");
+                let count = 0;
+                text = text.trim(); //убирает пробели в начале и в конце строки
+                let timer = setInterval(function () {
+                    if(count >= text.length) {
+                        count = 0;
+                        clearInterval(timer);
+                    }
+                    else {
+                       newField.value += text[count]; 
+                       count++;
+                    }
+                    
+                }, 50);
+                console.log(newField); 
+            }
+          
+        }
+        
+    </script>
+    <style>
+        textarea {
+            display: block;
+        }
+        #newText {
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="textField" rows="4" cols="50" placeholder="Type text here"></textarea>
+
+    <input type="button" id="butSend" value="Send to ticker"><br>
+    <input type="text" id="newText">
+</body>
+</html>

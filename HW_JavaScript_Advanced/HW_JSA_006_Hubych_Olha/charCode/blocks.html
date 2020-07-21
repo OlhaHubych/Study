@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', init); //set up handler on window load
+
+        //handler for window
+        function init() {
+            let blocks = document.querySelector('#blocks'); //get main div
+            document.addEventListener('keypress', handlerColor, true); //set up handler on event keypress
+        }
+
+        //handler for text
+        function handlerColor (e) {
+            let symbol = e.charCode; //get charCode of key
+            console.log(symbol);
+            if(symbol == 114)       blocks.style.color = 'red'    //keyCode r = 114
+            else if(symbol == 103)  blocks.style.color = 'green'; //keyCode g = 103
+            else if(symbol == 98)   blocks.style.color = 'blue';  //keyCode b = 98 
+            else blocks.style.color = 'black';
+        }
+    </script>
+</head>
+<body>
+    <div id="blocks">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rem vitae, esse in obcaecati ducimus ipsa voluptatum 
+            mollitia assumenda dolore sunt quidem reiciendis dolores autem, aperiam fugiat! Ipsa, molestias iste.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rem vitae, esse in obcaecati ducimus ipsa voluptatum 
+            mollitia assumenda dolore sunt quidem reiciendis dolores autem, aperiam fugiat! Ipsa, molestias iste.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rem vitae, esse in obcaecati ducimus ipsa voluptatum 
+            mollitia assumenda dolore sunt quidem reiciendis dolores autem, aperiam fugiat! Ipsa, molestias iste.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rem vitae, esse in obcaecati ducimus ipsa voluptatum 
+            mollitia assumenda dolore sunt quidem reiciendis dolores autem, aperiam fugiat! Ipsa, molestias iste.
+        </p>
+    </div>
+</body>
+</html>

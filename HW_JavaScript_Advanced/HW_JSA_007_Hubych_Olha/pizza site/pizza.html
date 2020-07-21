@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olha Hubych">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/pizza.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.png">
+    
+    <script src="./js/pizza.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <div class="dropdown-block">
+                <button class="fas fa-pizza-slice"></button>
+                <div class="dd-content">
+                    <a href="#">Четыре сыра</a>
+                    <a href="#">Пеперони</a>
+                    <a href="#">Мюнхенская</a>
+                    <a href="#">Фруктовая</a>
+                    <a href="#">Веганская</a>
+                </div>
+            </div>
+            <a href="#" class="nav-elem fas fa-truck"> &nbsp;|&nbsp;<span class="fas fa-hryvnia"></span></a>
+            <a href="#" class="nav-elem fas fa-phone-volume"></a>
+        </div>
+    </nav>
+    <header>
+        <h1 class="animate__animated animate__flip">Your best pizza ever</h1>
+    </header>
+    
+    <article>
+        <form>
+            <fieldset>
+                <div class="menu">
+                    <p>Выберите размер пиццы</p>
+                    <div class="food-container">
+
+                        <div class="card">
+                            <div class="img-block">
+                                <img src="img/little.png" alt="Little pizza">
+                            </div>
+
+                            <div class="info-block">
+                                
+                                <input type="checkbox" name="pizzaSize" value="little" data-price="100" data-main-check-id="1" id="little" class="check">
+                                <label for="little">Little - 100 грн</label>
+                                <details>
+                                    <summary>Дополнительные ингредиенты:</summary>
+                                    <input type="checkbox" name="mushroom" data-price="40" data-check-id="11" class="check" id="Lmushroom">
+                                    <label for="Lmushroom">Грибы - 40 грн</label><br>
+
+                                    <input type="checkbox" name="bacon" data-price="60" data-check-id="11" class="check" id="Lbacon">
+                                    <label for="Lbacon">Бекон - 60 грн</label><br>
+
+                                    <input type="checkbox" name="tomato" data-price="40" data-check-id="11" class="check" id="Ltomato">
+                                    <label for="Ltomato">Помидоры - 40 грн</label><br>
+
+                                    <input type="checkbox" name="cheese" data-price="50" data-check-id="11" class="check" id="Lcheese">
+                                    <label for="Lcheese">Сыр - 50 грн</label><br>
+
+                                    <input type="checkbox" name="olives" data-price="30" data-check-id="11" class="check" id="Lolives">
+                                    <label for="Lolives">Оливки - 30 грн</label> <br>
+                                </details>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="img-block">
+                                <img src="img/middle.png" alt="Middle pizza">
+                            </div>
+                            <div class="info-block">
+                                <input type="checkbox" name="pizzaSize" value="middle" data-price="150" data-main-check-id="2" id="middle" class="check">
+                                <label for="middle">Middle - 150 грн</label>
+                                <details>
+                                    <summary>Дополнительные ингредиенты:</summary>
+                                    <input type="checkbox" name="mushroom" data-price="40" data-check-id="22" class="check" id="Mmushroom">
+                                    <label for="Mmushroom">Грибы - 40 грн</label><br>
+
+                                    <input type="checkbox" name="bacon" data-price="60" data-check-id="22" class="check" id="Mbacon">
+                                    <label for="Mbacon">Бекон - 60 грн</label><br>
+
+                                    <input type="checkbox" name="tomato" data-price="40" data-check-id="22" class="check" id="Mtomato">
+                                    <label for="Mtomato">Помидоры - 40 грн</label><br>
+                                    
+                                    <input type="checkbox" name="cheese" data-price="50" data-check-id="22" class="check" id="Mcheese">
+                                    <label for="Mcheese">Сыр - 50 грн</label><br>
+                                    
+                                    <input type="checkbox" name="olives" data-price="30" data-check-id="22" class="check" id="Molives">
+                                    <label for="Molives">Оливки - 30 грн</label> <br>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img-block">
+                                <img src="img/big.png" alt="Big pizza">
+                            </div>
+                            
+                            <div class="info-block">
+                                <input type="checkbox" name="pizzaSize" value="big" data-price="200" data-main-check-id="3" id="big" class="check">
+                                <label for="big">Big - 200 грн</label> 
+                                <details>
+                                    <summary>Дополнительные ингредиенты:</summary>
+                                    <input type="checkbox" name="mushroom" data-price="40" data-check-id="33" class="check" id="Bmushroom">
+                                    <label for="Bmushroom">Грибы - 40 грн</label><br>
+                                    
+                                    <input type="checkbox" name="bacon" data-price="60" data-check-id="33" class="check" id="Bbacon">
+                                    <label for="Bbacon">Бекон - 60 грн</label><br>
+                                    
+                                    <input type="checkbox" name="tomato" data-price="40" data-check-id="33" class="check" id="Btomato">
+                                    <label for="Btomato">Помидоры - 40 грн</label><br>
+                                    
+                                    <input type="checkbox" name="cheese" data-price="50" data-check-id="33" class="check" id="Bcheese">
+                                    <label for="Bcheese">Сыр - 50 грн</label><br>
+                                    
+                                    <input type="checkbox" name="olives" data-price="30" data-check-id="33" class="check" id="Bolives">
+                                    <label for="Bolives">Оливки - 30 грн</label> <br>
+                                </details>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="price-box">
+                    <p>Сумма заказа (грн):</p>
+                    <input type="text" name="finalCost" value="0" disabled>
+                </div>
+                <hr>
+                <div class="delivery">
+                    <p>Куда доставить</p>
+                    <span id="message"></span>
+
+                    <ul class="contacts">
+                        <li class="contact-item">
+                            <label for="customerName"><sup>*</sup>Имя</label>
+                            <input type="text" name="customerName" id="customerName" data-pattern="^[а-яА-Яa-zA-Z]+" data-msg="Введите данные корректно" data-msg-id="message">
+                        </li>
+
+                        <li class="contact-item">
+                            <label for="customerPhone"><sup>*</sup>Телефон</label>
+                            <input type="phone" name="customerPhone" id="customerPhone" data-pattern="^0\d{9}$" data-msg="Введите данные корректно" data-msg-id="message" placeholder="0971234567">
+                        </li>
+
+                        <li class="contact-item">
+                            <label for="customerCity"><sup>*</sup>Город</label>
+                            <input type="text" name="customerCity" id="customerCity" data-pattern="^[а-яА-Яa-zA-Z]+" data-msg="Введите данные корректно" data-msg-id="message"> 
+                        </li>
+
+                        <li class="contact-item">
+                            <label for="customerStreet"><sup>*</sup>Улица</label>
+                            <input type="text" name="customerStreet" id="customerStreet" data-pattern="^[а-яА-Яa-zA-Z]+"  data-msg="Введите данные корректно" data-msg-id="message">
+                        </li>
+
+                        <li class="contact-item">
+                            <label for="customerHouse"><sup>*</sup>Номер дома</label>
+                            <input type="text" name="customerHouse" id="customerHouse" data-pattern="^\d+[а-яА-Яa-zA-Z]*" data-msg="Введите данные корректно" data-msg-id="message">
+                        </li>
+                    </ul>
+                </div>
+                <span id="messageDone"></span>
+                <span id="messageMain"></span>
+                <input type="submit" value="Подтвердить заказ" class="btn-submit">
+            </fieldset>
+        </form>
+    </article>
+    <footer>
+        <div>
+            <a href="#" class="social fab fa-instagram-square" target="_blank" alt="Instagram"></a>
+            <a href="#" class="social fab fa-facebook-square" target="_blank" alt="Facebook"></a>
+        </div>
+        <p>&copy; Olha Hubych 2020 <br> Images - https://www.vectorstock.com/</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="handler.js"></script>
+    
+</head>
+<body>
+    <p id="par">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex id quam aspernatur magnam nam recusandae 
+        ipsum ducimus maxime libero sapiente, odio eos. Fugit inventore veritatis labore dolorum numquam pariatur sequi?</p>
+    <div class="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fuga temporibus voluptatibus porro vel ipsa nobis! Esse, 
+        distinctio? Necessitatibus quis ex suscipit dolor corporis consequatur optio tempore, deserunt enim ut!</div>
+    <script>
+        //create handler
+        function handlerPar () {
+            this.style.backgroundColor = 'yellow';
+        }
+        //create object of hundler and give all parameters
+        let h = new Handler('#par', 'click', handlerPar, false);
+        h.setHandler();
+
+        
+        function handlerDiv (e) {
+            e.target.style.border = '2px solid red';
+        }
+
+        let h2 = new Handler('.div', 'mouseover', handlerDiv, false);
+        h2.setHandler();
+
+    </script>
+</body>
+</html>

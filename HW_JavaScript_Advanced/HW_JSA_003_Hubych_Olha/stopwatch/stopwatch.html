@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        p {
+            display: inline-block;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            //find element by id
+            let getElement = function (id_element) {
+                return document.getElementById(id_element);
+            }
+
+            //counters for seconds, minutes, hours
+            let sec = 0;
+            let min = 0;
+            let hour = 0;
+            let timer;
+            let startFlag = true;
+
+            //handler for Start button 
+            getElement("buttonStart").onclick = function () {
+                if(startFlag) {
+                    timer = setInterval(function () { //call function
+                    if(++sec >= 60) { //increment the seconds-counter and then check it
+                        sec = 0; //switch off the seconds-counter
+                        if(++min >= 60) { //check the minutes-counter
+                            min = 0;
+                            if(++hour >= 25) { //check the hours-counter
+                                hour = 0;
+                            }
+                            if(hour >=1 && hour <=9) getElement("hours").innerHTML = "0" + hour
+                            else getElement("hours").innerHTML = hour; //show hours in paragraph while hour <= 24
+                            startFlag = false;
+                        }
+                        if(min >=1 && min <=9) getElement("minutes").innerHTML = "0" + min;
+                        else getElement("minutes").innerHTML = min; //show minutes in paragraph while minute <= 59
+                        startFlag = false;
+                    }
+                    if(sec >=1 && sec <=9) getElement("seconds").innerHTML = "0" + sec;
+                    else getElement("seconds").innerHTML = sec; //show seconds in paragraph while second <= 59
+                    startFlag = false;
+                    }, 50);
+                }
+            }
+
+            //handler for Stop button 
+            getElement("buttonStop").onclick = function () {
+                let stop = clearInterval(timer);
+                startFlag = true;
+            }
+
+            //handler for Reset button 
+            getElement("buttonReset").onclick = function () {
+                //switch off all counters
+                sec = 0;
+                min = 0;
+                hour = 0;
+                //show property text
+                getElement("seconds").innerHTML = "00";
+                getElement("minutes").innerHTML = "00";
+                getElement("hours").innerHTML = "00";
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Stopwatch</h3>
+    <p id="hours">00</p>
+    <p>:</p>
+    <p id="minutes">00</p>
+    <p>:</p>
+    <p id="seconds">00</p>
+    <br>
+    <input type="button" name="start" id="buttonStart" value="Start">
+    <input type="button" name="stop" id="buttonStop" value="Stop">
+    <input type="button" name="reset" id="buttonReset" value="Reset">
+</body>
+</html>

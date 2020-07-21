@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            let srcArrayForCache = ['ice-cream.jpg', 'donuts.png', 'fast-food.png'];
+            let previewImg = document.querySelectorAll("input[type='image']");
+
+            let bigPicture = document.createElement('img');
+            styleBlockBigImg(bigPicture);
+            document.body.append(bigPicture);
+
+            let cacheImg = cacheImages(srcArrayForCache);
+            for(let i = 0; i < previewImg.length; i++) {
+                previewImg[i].addEventListener('click', function(){
+                    bigPicture.style.visibility = "visible";
+                    bigPicture.src = cacheImg[i].src;
+                }, false);
+            }
+
+            function cacheImages(arrayImgs) {
+                let cacheImg = [];
+                for(let j = 0; j < arrayImgs.length; j++) {
+                    cacheImg[j] = new Image();
+                    cacheImg[j].src = arrayImgs[j];
+                }
+                return cacheImg;
+            }
+
+            function styleBlockBigImg(blockImg) {
+                blockImg.style.display      = "block";
+                blockImg.style.visibility   = "hidden";
+                blockImg.style.width        = "900px";
+                blockImg.style.height       = "630px";
+                blockImg.style.textAlign    = "center";
+            } 
+        }
+    </script>
+</head>
+<body>
+   <input type="image" src="01ice.jpg" alt="Pusheen ice cream">
+   <input type="image" src="02don.png" alt="Pusheen donuts">
+   <input type="image" src="03food.png" alt="Pusheen fast food">
+
+</body>
+</html>

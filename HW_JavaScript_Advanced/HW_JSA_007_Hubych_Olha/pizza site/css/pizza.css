@@ -1,0 +1,426 @@
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100vw;
+  height: 3em;
+  background: #ffcd46;
+  font-size: 1em;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.nav a {
+  display: block;
+  width: 8em;
+  height: 100%;
+  padding: 1em;
+  color: purple;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  background-color: white;
+  border-bottom: 2px solid #fba300;
+}
+
+.nav a:active {
+  background-color: white;
+}
+
+.dropdown-block {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-block button {
+  display: block;
+  width: 8em;
+  height: 100%;
+  margin: 0;
+  padding: 1em;
+  background: #ffcd46;
+  color: purple;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.dropdown-block:hover .dd-content {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  z-index: 1;
+}
+
+.dropdown-block:hover button {
+  background: white;
+  border-bottom: 2px solid orange;
+}
+
+.dd-content {
+  position: absolute;
+  width: 8em;
+  background-color: white;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.dd-content a {
+  border-bottom: 1px solid orange;
+}
+
+.dd-content a:hover {
+  background-color: #ffcd46;
+}
+
+.dd-content a:last-of-type {
+  border-bottom: none;
+}
+
+.dd-content a:active {
+  background-color: #ffcd46;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../font/Comfortaa/static/Comfortaa-Bold.ttf");
+}
+
+@media screen and (min-width: 873px) {
+  .price-box {
+    height: 2.5em;
+  }
+  .price-box p {
+    font-size: 1.3em;
+  }
+  .delivery {
+    width: 50%;
+  }
+}
+
+article {
+  margin: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2% 0;
+  font-size: 1.3em;
+  font-family: Comfortaa;
+  background-image: url(../img/vectorstock_11619985.jpg);
+  background-repeat: repeat;
+  background-size: 40%;
+}
+
+article span {
+  color: hotpink;
+  margin: 0 auto;
+  -webkit-animation: 4s message infinite;
+          animation: 4s message infinite;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+article hr {
+  width: 30%;
+  margin-top: 0;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 8px dotted orange;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+article fieldset {
+  width: 70vw;
+  margin: 0 auto;
+  border-radius: 1.5em;
+  border-color: #f1f125;
+  background-color: white;
+  -webkit-box-shadow: 0 0 15px lightslategray;
+          box-shadow: 0 0 15px lightslategray;
+}
+
+article fieldset .menu {
+  margin-bottom: 2.5em;
+}
+
+article fieldset .menu p {
+  text-align: center;
+  font-size: 1.56em;
+}
+
+article fieldset .btn-submit {
+  font-size: 1.04em;
+  font-family: Comfortaa;
+  text-transform: uppercase;
+  background-color: orange;
+  border-radius: 1.5em;
+  border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0.5em auto;
+  padding: 0.8em 0.9em;
+  outline: none;
+  cursor: pointer;
+  display: block;
+}
+
+article fieldset .btn-submit:active {
+  -webkit-transform: translateY(0.1em);
+          transform: translateY(0.1em);
+}
+
+@-webkit-keyframes message {
+  0% {
+    color: orchid;
+  }
+  50% {
+    color: purple;
+  }
+  100% {
+    color: hotpink;
+  }
+}
+
+@keyframes message {
+  0% {
+    color: orchid;
+  }
+  50% {
+    color: purple;
+  }
+  100% {
+    color: hotpink;
+  }
+}
+
+.food-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.food-container .card {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.food-container .card .img-block {
+  height: 250px;
+}
+
+.food-container .card .img-block img {
+  display: block;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.food-container .card .info-block {
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-right: 1em;
+  text-align: left;
+}
+
+.food-container .card .info-block details {
+  text-align: left;
+}
+
+.food-container .card .info-block details summary {
+  outline: none;
+  cursor: pointer;
+}
+
+.check {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.check + label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.check + label::before {
+  content: '';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  border: 2px solid gray;
+  background-color: white;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+}
+
+.check:checked + label::before {
+  background-color: #ffbb00;
+}
+
+.check:hover + label::before {
+  -webkit-box-shadow: 0 0 0 0.3em rgba(163, 194, 190, 0.5);
+          box-shadow: 0 0 0 0.3em rgba(163, 194, 190, 0.5);
+}
+
+.price-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: beige;
+  border-radius: 0.5em;
+  margin-bottom: 2.5em;
+  font-size: 1em;
+  height: 4em;
+}
+
+.price-box p {
+  margin: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.price-box input {
+  text-align: center;
+  font-size: 1.3em;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #D2E4C9;
+  border-radius: 0.5em;
+  border: none;
+  display: inline-block;
+}
+
+.delivery {
+  margin: 0 auto;
+}
+
+.delivery p {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.delivery .contacts {
+  background-color: whitesmoke;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.delivery .contacts .contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.5em;
+}
+
+.delivery .contacts .contact-item input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.delivery .contacts .contact-item label {
+  margin-right: 0.2em;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2.5em;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(orange));
+  background: linear-gradient(to bottom, white, orange);
+}
+
+footer .social {
+  text-decoration: none;
+  font-size: 3em;
+  color: purple;
+}
+
+footer .social:hover {
+  color: lightslategrey;
+}
+
+footer p {
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100vw;
+  height: 14em;
+  background-image: url(../img/hd.jpg);
+  background-color: #ffcd46;
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+header h1 {
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-size: 3em;
+  text-shadow: #961515 8px 8px 10px, #e85c5c -8px -8px 10px;
+  letter-spacing: 0.15em;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/*# sourceMappingURL=pizza.css.map */

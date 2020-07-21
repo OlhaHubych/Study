@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', init, false);
+
+        function init () {
+            //if data is already in cookie - read them
+            if(getCookie("setUpColor")) {
+                console.log(getCookie("setUpColor"));
+                document.body.style.backgroundColor = getCookie("setUpColor");
+                
+            }
+            if(getCookie("setUpFontSize")) {
+                console.log(getCookie("setUpFontSize"));
+                document.body.style.fontSize = getCookie("setUpFontSize");
+            }
+
+            //additional function to find elements by id
+            function $ (elemId) {
+                return document.querySelector(elemId);
+            }
+
+            //define handlers
+            $('#fontSize').addEventListener('change', fontSizeHandler, false);
+            $('#color').addEventListener('change', colorHandler, false);
+            $('#btnSave').addEventListener('click', saveHandler, false);
+
+            let setUpColor;
+            let setUpFontSize;
+
+            //handler for color-select
+            function colorHandler () {
+                let colors = this.options;                                  //get all colors
+                for(let i = 1; i < colors.length; i++) {
+                    if (colors[i].selected) {                               //if color is selected
+                        setUpColor = colors[i].value;                       //save this color to setUpColor variable
+                        document.body.style.backgroundColor = setUpColor;   //set up this color for body 
+                    }
+                }
+            }
+
+            //handler for save button
+            function saveHandler () {
+                document.cookie = "setUpFontSize=" + encodeURIComponent(setUpFontSize) +";max-age=" + (60*60*24); //save values in cookies
+                document.cookie = "setUpColor=" + encodeURIComponent(setUpColor) + ";max-age=" + (60*60*24);
+               
+                document.body.style.backgroundColor = setUpColor; //set up style for body
+                document.body.style.fontSize = setUpFontSize;
+                return true;
+            }
+
+            //handler for font-size input
+            function fontSizeHandler () {
+                let pattern = this.dataset.pattern; //get regex
+                let message = this.dataset.msg;     //get message notification
+                let value = this.value;             //get value from field
+                let maxFontSize = 2000;             //set up max fontSize
+
+                if(value != "") {
+                    let match = value.search(pattern); //check if data is correct
+                    if(match == -1 || (+value > maxFontSize) || (+value < 0)) { //uncorrect data
+                        document.getElementById('userMsg').innerHTML = message; //show message
+                        return false;
+                    }
+                    else {                                                      //correct data
+                        setUpFontSize = value  + "px";                          //set up fontSize
+                        document.body.style.fontSize = setUpFontSize;
+                        return true;
+                    }
+                }
+            }
+
+            //additional function to find cookie value by cookie name
+            function getCookie (nameCookie) {
+                let allCookies = document.cookie;                       //get all cookies
+                allCookies = decodeURIComponent(allCookies);            //decode cookies
+
+                nameCookie += "=";                                      
+                let pos = allCookies.indexOf(nameCookie);               //find position
+                if(pos != -1) {                                         //if nameCookie is 
+                    let start = pos + nameCookie.length;                //set up start position
+                    let stop = allCookies.indexOf(";", start);          //find stop position
+                    if(stop == -1) {                                    //if stop is the end of cookies
+                        stop = allCookies.length;                       //set up stop
+                    }
+                    let valueCookie = allCookies.substring(start, stop);//get cookie value
+                    return valueCookie;
+                }
+                else return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="fontSize">Укажите размер шрифта (px)</label>
+        <input type="text" id="fontSize" data-pattern="^\d+[^\.,]$" data-msg="Неверный формат. Допускаются только целые числа, максимум 2000.">
+        <span id="userMsg"></span>
+        <br><br>
+
+        <select name="color" id="color">
+            <option selected disabled>Выберите цвет</option>
+            <option value="lightyellow">Желтый</option>
+            <option value="lightgray">Серый</option>
+            <option value="lightblue">Голубой</option>
+            <option value="Pink">Розовый</option>
+        </select>
+        <br><br>
+        <input type="button" id="btnSave" value="Сохранить">
+    </form>
+    
+</body>
+</html>

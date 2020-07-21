@@ -1,0 +1,97 @@
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100vw;
+  height: 3em;
+  background: #ffcd46;
+  font-size: 1em;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.nav a {
+  display: block;
+  width: 8em;
+  height: 100%;
+  padding: 1em;
+  color: purple;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  background-color: white;
+  border-bottom: 2px solid #fba300;
+}
+
+.nav a:active {
+  background-color: white;
+}
+
+.dropdown-block {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-block button {
+  display: block;
+  width: 8em;
+  height: 100%;
+  margin: 0;
+  padding: 1em;
+  background: #ffcd46;
+  color: purple;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.dropdown-block:hover .dd-content {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  z-index: 1;
+}
+
+.dropdown-block:hover button {
+  background: white;
+  border-bottom: 2px solid orange;
+}
+
+.dd-content {
+  position: absolute;
+  width: 8em;
+  background-color: white;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.dd-content a {
+  border-bottom: 1px solid orange;
+}
+
+.dd-content a:hover {
+  background-color: #ffcd46;
+}
+
+.dd-content a:last-of-type {
+  border-bottom: none;
+}
+
+.dd-content a:active {
+  background-color: #ffcd46;
+}
+/*# sourceMappingURL=nav.css.map */

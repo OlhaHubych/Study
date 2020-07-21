@@ -1,0 +1,25 @@
+//---------------------------- variables ---------------------------
+$fontSize: 3em;
+$color1: white;
+$color2: orange;
+
+//---------------------------- main --------------------------------
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5em;
+    background: linear-gradient(to bottom, $color1, $color2);
+    .social {
+        text-decoration: none;
+        font-size: $fontSize;
+        color: purple;
+        &:hover {
+            color: lightslategrey;
+        }
+    }
+    p {
+        margin-bottom: 0;
+        font-size: $fontSize*0.3;
+    }
+    
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload  = function () {
+            
+            let input = document.getElementById("start");
+            let temp = 0;
+
+            input.onclick =  function () {
+                if(temp <= 9) {
+                    let paragraph = document.createElement("p");
+                    paragraph.style.border = "1px solid green";
+                    paragraph.innerHTML = "New paragraph";
+                    input.after(paragraph);
+                    temp++;
+                }
+                else {
+                    while(temp < 12) {
+                        document.body.lastElementChild.remove(); 
+                        temp--;
+                    }
+                       
+                    
+                }
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="start" type="button" value="Add paragraph">
+</body>
+</html>

@@ -1,0 +1,100 @@
+//-------------------------------- variables -------------------------
+$colorBg1: white;
+$colorBg2: #ffcd46;
+$colorText: purple;
+$colorBorder: orange;
+
+$width: 100vw;
+$height: 3em;
+$fontSize: 1em;
+$fontFamily: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+$widthBox: 8em;
+$paddingBox: 1em;
+
+//-------------------------------- main ---------------------------------
+.nav {
+    display: flex;
+    justify-content: start;
+    width: $width;
+    height: $height;
+    background: $colorBg2;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    
+    a {
+        display: block;
+        width: $widthBox;
+        height: 100%;
+        padding: $paddingBox;
+        color: $colorText;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $colorBg1;
+            border-bottom: 2px solid darken($colorBorder, 0.7);
+        }
+
+        &:active {
+            background-color: $colorBg1;
+        }
+    }
+}
+
+.dropdown-block {
+    position: relative;
+    display: inline-block;
+    button {
+        display: block;
+        width: $widthBox;
+        height: 100%;
+        margin: 0;
+        padding: $paddingBox;
+        background: $colorBg2;
+        color: $colorText;
+        font-size: $fontSize;
+        cursor: pointer;
+        outline: none;
+        border: none;
+    }
+    &:hover {
+        .dd-content {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0%);
+            z-index: 1;
+        }
+        button {
+            background: $colorBg1;
+            border-bottom: 2px solid $colorBorder;
+        }
+    }
+}
+
+.dd-content {
+    position: absolute;
+    width: $widthBox;
+    background-color: $colorBg1;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+    z-index: -1;
+    transform: translateY(-1em);
+    visibility: hidden; 
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+
+    a {
+        border-bottom: 1px solid $colorBorder;
+        &:hover {
+            background-color: $colorBg2; 
+        }
+        &:last-of-type {
+            border-bottom: none;
+        }
+        &:active {
+            background-color: $colorBg2;
+        }
+    }
+}

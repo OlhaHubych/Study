@@ -1,0 +1,9 @@
+@mixin height($value) {
+    height: $value;
+}
+@mixin font-size($size) {
+    font-size: $size;
+}
+@mixin width($value) {
+    width: $value;
+}

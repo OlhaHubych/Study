@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', function () {
+            //----------------------------- definition ---------------------------
+            //function for doing user's operation
+            let doOperation = function (fNum, sNum, sign) {
+                switch(sign) {
+                    case "+" : res = fNum + sNum; 
+                                break;
+                    case "-" : res = fNum - sNum;
+                                break;
+                    case "/" : if(sNum == 0) res = 0; //prevent div on 0
+                                else if(fNum < sNum) {//if first number less then second
+                                    res = fNum / sNum;
+                                    res = res.toFixed(6);//show 6 values after point
+                                }
+                                else res = fNum / sNum;
+                                break;
+                    case "*" : res = fNum * sNum;
+                                break;
+                }
+                return res;
+            }
+
+            //get elements
+            let firstNumber = document.querySelector('#firstField');
+            let secondNumber = document.querySelector('#secondField');
+            
+            let butPlus = document.querySelector('#butPlus');
+            let butMinus = document.querySelector('#butMinus');
+            let butDiv = document.querySelector('#butDiv');
+            let butMul = document.querySelector('#butMul');
+
+            let resultField = document.querySelector('#result');
+            let result = 0;
+
+            //set up the handlers
+            butPlus.addEventListener('click',   handlerPlus, false);
+            butMinus.addEventListener('click',  handlerMinus, false);
+            butDiv.addEventListener('click',    handlerDiv, false);
+            butMul.addEventListener('click',    handlerMul, false);
+
+            let container = document.querySelector('.calculator');
+            //---------------------------------- main --------------------------------
+            //handler for main div - type only numbers [0-9]
+            container.addEventListener('keypress', function (event) {
+                console.dir(event);
+                if(event.charCode < 48 || event.charCode > 57) { //48 = char code of 0, 57 - char code of 9
+                        event.preventDefault();//if syblol isn't a number[0-9] prevent type it into input
+                    }
+            }, true); //true - for all text elements
+
+            //handler of button Plus
+            function handlerPlus () {
+                //get values into input
+                let oper1 = parseInt(firstNumber.value);
+                console.log(oper1);
+                let oper2 =  parseInt(secondNumber.value);
+                console.log(oper2);
+
+                //count the result
+                let rez = doOperation(oper1, oper2, "+");
+                //show it in result field
+                resultField.value = rez;
+            }
+
+            //handler of button Minus
+            function handlerMinus () {
+                let oper1 = parseInt(firstNumber.value);
+                console.log(oper1);
+                let oper2 =  parseInt(secondNumber.value);
+                console.log(oper2);
+
+                let rez = doOperation(oper1, oper2, "-");
+                resultField.value = rez;
+            }
+
+            //handler of button division
+            function handlerDiv () {
+                let oper1 = parseInt(firstNumber.value);
+                console.log(oper1);
+                let oper2 =  parseInt(secondNumber.value);
+                console.log(oper2);
+
+                let rez = doOperation(oper1, oper2, "/");
+                resultField.value = rez;
+            }
+
+            //handler of button multiply
+            function handlerMul () {
+                let oper1 = parseInt(firstNumber.value);
+                console.log(oper1);
+                let oper2 =  parseInt(secondNumber.value);
+                console.log(oper2);
+
+                let rez = doOperation(oper1, oper2, "*");
+                resultField.value = rez;
+            }
+
+        }, false);
+            
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <label for="firstField">Operand 1</label>
+        <input type="text" id="firstField" value=""><br>
+
+        <label for="secondField">Operand 2</label>
+        <input type="text" id="secondField" value=""><br>
+
+        <label for="butPlus">Operations</label>
+        <input type="button" value="+" id="butPlus">
+        <input type="button" value="-" id="butMinus">
+        <input type="button" value="/" id="butDiv">
+        <input type="button" value="*" id="butMul">
+        
+        <label for="result">Result</label>
+        <input type="text" id="result" value="" disabled>
+    </div>
+</body>
+</html>

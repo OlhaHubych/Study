@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            //======================= definition =============================
+
+            //array for URLs and titles
+            let windowURL = ['lesson1.html', 'lesson2.html', 'lesson3.html'];
+            let windowTitle = ['JS урок 1', 'JS урок 2', 'JS урок 3'];
+
+            //get  all links
+            let links = document.getElementsByTagName('a');
+            //create handlers for click
+            links[0].onclick = lesson1Handler;
+            links[1].onclick = lesson2Handler;
+            links[2].onclick = lesson3Handler;
+
+            //define oblects for each window
+            let win1;
+            let win2;
+            let win3;
+            //define flag for each window
+            let tmp1 = 1;
+            let tmp2 = 1;
+            let tmp3 = 1;
+
+            //create and open a window with specific parameters
+            let openWindow = function (winURL, winTitle, indexLink) {
+                    winObj = window.open(winURL, winTitle, 'width=200px; height=200px');
+                    indexLink.innerHTML = winTitle + ' (открыт)'; //add new  info into link
+                    return winObj;
+            }
+            //close window    
+            let closeWindow  = function(winObj, indexLink, winTitle) {
+                    winObj.close();
+                    indexLink.innerHTML = winTitle; 
+            }
+
+            // =========================== main ================================
+            //handler for 1 link
+            function lesson1Handler () {
+                if(tmp1) { //if link click at first
+                    win1 = openWindow(windowURL[0], windowTitle[0], links[0]);
+                    tmp1 = 0; //clear flag after openning window
+                }
+                else {
+                    closeWindow(win1, links[0], windowTitle[0]);
+                    tmp1 = 1; //switch on flag after closing window
+                }
+            }
+
+            //handler for 2 link
+            function lesson2Handler () {
+                if(tmp2) {
+                    win2 = openWindow(windowURL[1], windowTitle[1], links[1]);
+                    tmp2 = 0;
+                }
+                else {
+                    closeWindow(win2, links[1], windowTitle[1]);
+                    tmp2 = 1;
+                }
+            }
+
+            //handler for 3 link
+            function lesson3Handler () {
+                if(tmp3) {
+                    win3 = openWindow(windowURL[2], windowTitle[2], links[2]);
+                    tmp3 = 0;
+                }
+                else {
+                    closeWindow(win3, links[2], windowTitle[2]);
+                    tmp3 = 1;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="#">JS урок 1</a><br>
+    <a href="#">JS урок 2</a><br>
+    <a href="#">JS урок 3</a><br>
+</body>
+</html>

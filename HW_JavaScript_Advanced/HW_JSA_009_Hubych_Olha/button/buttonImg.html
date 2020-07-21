@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img {
+            display: block;
+            width: 500px;
+            height: 350px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', init, false);
+
+        function init () {
+            //cache all images
+            let allImgSrc = ['ice-cream.jpg', 'donuts.png', 'fast-food.png'];
+                img = [];
+            for(let i = 0; i < allImgSrc.length; i++) {
+                img[i] = new Image();
+                img[i].src = allImgSrc[i];
+            }
+            //get buttons and create tag img
+            let btns = document.querySelectorAll('input[type="button"]');
+                imgTag = document.createElement('img');
+            document.body.append(imgTag);
+
+            //set up handlers for each button
+            for(let j = 0; j < btns.length; j++) {
+                btns[j].addEventListener('click',
+                    function () { 
+                        imgTag.src = img[j].src;
+                        imgTag.className = "img";
+                    }, 
+                false)
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Show img 1" id="btn1">
+    <input type="button" value="Show img 2" id="btn2">
+    <input type="button" value="Show img 3" id="btn3">
+</body>
+</html>

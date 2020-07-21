@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="buildDiagram.js"></script>
+</head>
+<body>
+    <canvas id="diagramCanvas"></canvas>
+    <script>
+        let can = document.querySelector('#diagramCanvas');
+        let diagram = new Diagram([100, 300, 1800, 490, 259, 800, 500, 1000], can, 600, 300);
+        diagram.makeDiagram();
+    </script>
+</body>
+</html>

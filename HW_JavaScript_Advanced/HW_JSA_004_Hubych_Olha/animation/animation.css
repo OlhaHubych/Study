@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: auto;
+    background: linear-gradient();
+}
+
+.block {
+    width: 1300px;
+    height: 600px;
+    position: relative;
+    border: 2px solid lightgrey;
+    border-radius: 2px;
+    margin: 10px auto;
+
+}
+.block-car {
+    width: 150px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    font-size: 95px;
+    color: royalblue;
+}
+
+.btnContainer {
+    text-align: center;
+}
+
+.icon-arrow {
+    color: rgb(223, 95, 159);
+    font-size: 30px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgb(223, 115, 196);
+}
+button:active {
+    padding-bottom: 2px;
+}
+
+.alert {
+    width: fit-content;
+    border: 2px solid rgb(223, 95, 159);
+    border-radius: 3px;
+    margin: 5px auto;
+    padding: 8px;
+    color: red;
+    font-size: 1.5em;
+
+}

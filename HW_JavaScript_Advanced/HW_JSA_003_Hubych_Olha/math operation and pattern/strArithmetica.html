@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //============================ definition ===============================
+        let patternNumber = /\d+/g; //regex to find operands - all digit numbers
+        let patternCheckStr = /^\s*\d+\s*\W{1}\s*\d+\s*$/; //regex to check format of user string (we declale corect format, 
+                                                            //than check it with user str
+                            /* ^    - startSrt
+                                \s  - any space char 
+                                *   - 0 or more
+                                \d  - digital numbers
+                                +   - 1 or few 
+                                \W  - any symbol (not _ and digital numbers and letters 
+                                {1} - only one - exact match
+                            */
+        let patternPlus = /\+/; //regex to find sign +
+        let patternMinus = /-/; //regex to find sign -
+
+        //get numbers from user string
+        let getArrNumber = function (uString, pattern) {
+            let arr = uString.match(pattern); //get array numbers
+            if(arr == 0 || arr == undefined) return -1;
+            else if(arr.length != 2) return -1; //check - operation only with 2 operands
+            else return arr;
+        }
+
+        //get sing + or - from user string
+        let getSign = function (uString, petternSignPlus, patternSignMinus) {
+            let sign;
+            if(petternSignPlus.test(uString)) { //if user str has '+'
+                let temp = uString.match(petternSignPlus); //get it
+                sign = temp[0];
+                //console.log(sign);
+            }
+            else if(patternSignMinus.test(uString)) { //if user str has '-' 
+                let temp = uString.match(patternSignMinus); //get it
+                sign = temp[0];
+            }
+            return sign;
+        }
+
+        //count result according to sign
+        let getResult = function (sign, arr) {
+            let rez;
+            switch(sign) {
+                case "+":   rez = parseInt(arr[0]) + parseInt(arr[1]);
+                            //console.log(rez);
+                            break;
+                case "-":   rez = parseInt(arr[0]) - parseInt(arr[1]);
+                            //console.log(rez);
+                            break;
+                default:    rez = -1;
+                            break;
+            }
+            return rez;
+        }
+
+        // ================================ main ======================================
+        let user_str = prompt("Доступны операция сложения и вычитания над числами.\nДля сложения введите + , для вычитания -");
+        console.log(user_str);
+
+        //check format
+        if(!patternCheckStr.test(user_str)) alert("Неверный формат выражения.\nОперация невозможна.\nПерезапустите программу и попробуйте еще раз.");
+        else {
+            //get operands
+            let arrRez = getArrNumber(user_str, patternNumber);
+            if(arrRez == -1) {
+                alert("Неверный формат чисел.\nОперация невозможна.\nПерезапустите программу и попробуйте еще раз.");
+            }
+            console.log(arrRez);
+
+            //get sign
+            let sign = getSign(user_str, patternPlus, patternMinus);
+            console.log(sign);
+            //count result
+            let result = getResult(sign, arrRez);
+            console.log(result);
+            if(result == -1) alert("Вы ввели неверный знак! \nОперация невозможна.\nПерезапустите программу и попробуйте еще раз.");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olha Hubych">
+    
+    <title>Authorization</title>
+    <link rel="stylesheet" href="authoriz.css">
+</head>
+<body>
+    <form action="hight_authoriz.html">
+        <fieldset>
+            <h4>Login to Web App</h4>
+
+            <p>
+                <label for="user"></label>
+                <input type="text" name="user" id="user" placeholder="Username or Email" value="">
+            </p>
+
+            <p>
+                <label for="pass"></label>
+                <input type="password" name="pass" id="pass" placeholder="Password" value="">
+            </p>
+
+            <p class="left">
+                <input class="checkbox inline-block" type="checkbox" name="me_remember">
+                <label class="inline-block label_aline">Remember me on this computer</label>
+                <input class="button inline-block" type="button" value="Login" id="btnLogin">
+            </p>
+        </fieldset>
+    </form>
+    <p><b>Forgot your password?</b> 
+        <a href="#">Click here to reset it.</a>
+    </p>
+    <script src="authoriz.js"></script>
+</body>
+</html>

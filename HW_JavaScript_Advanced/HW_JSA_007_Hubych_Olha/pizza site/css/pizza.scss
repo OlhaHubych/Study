@@ -1,0 +1,44 @@
+//---------------------------- variables ---------------------------
+$width: 100vw;
+$heightHead: 14em;
+
+$colorH1: white;
+$shadowH1: rgb(150, 21, 21);
+$imageBG: url(../img/hd.jpg);
+$colorBG: #ffcd46;
+
+$fontHead: 3em;
+$fontFamilyHead: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+//--------------------------- import -------------------------------
+@import 'nav';
+@import 'article';
+@import 'footer';
+
+//--------------------------- main ---------------------------------
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: $width;
+    height: $heightHead;
+    background: {
+        image: $imageBG;
+        color: $colorBG;
+        size: contain;
+        repeat: repeat-x;
+    }
+    h1 {
+        text-align: center;
+        margin: 0;
+        color: $colorH1;
+        font-size: $fontHead;
+        text-shadow: $shadowH1 8px 8px 10px, lighten($shadowH1, 30) -8px -8px 10px;
+        letter-spacing: 0.05*$fontHead;
+        font-family: $fontFamilyHead; 
+    }  
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', init);
+        function init () {
+            document.addEventListener('keydown', handlerDefinitionKeyPress, false);
+        }
+
+            function handlerDefinitionKeyPress (e) {
+                console.log(e);
+                let message;
+                //ctrl + a/A
+                if (e.ctrlKey && (e.keyCode == 65 || e.keyCode == 97)) { //65 - A, 97 - a
+                    message = document.querySelector('#selectedAll');
+                    message.style.visibility = 'visible';
+                }
+                //ctrl+shift + s/S
+                else if(e.ctrlKey && e.shiftKey && e.keyCode == 83 || e.keyCode == 115) {
+                    message = document.querySelector('#savedAll');
+                    message.style.visibility = 'visible';
+                }
+                //ctrl + s/S
+                else if(e.ctrlKey && (e.keyCode == 83 || e.keyCode == 115)) { //83 - S, 115 - s
+                    message = document.querySelector('#saved');
+                    message.style.visibility = 'visible';
+                } 
+            }
+    </script>
+</head>
+<body>
+    <span id="selectedAll">Выбрано все</span><br>
+    <span id="saved">Сохранено</span><br>
+    <span id="savedAll">Сохранено все</span>
+    
+</body>
+</html>

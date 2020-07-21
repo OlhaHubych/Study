@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* ============== define ============== */
+        function Chocolate (name, fats, proteins, carbohydrates, weight, energy_value) {
+            this.name = name;
+            this.fats = fats;
+            this.proteins = proteins;
+            this.carbohydrates = carbohydrates;
+            this.weight = weight;
+            this.energy_value = energy_value;
+        }
+        //переопределяем метод, чтобы он работал явно и неявно для всех экземпляров-объектов
+        Chocolate.prototype.toString = function() {
+            return "Chocolate '" + this.name + "' has fats " + this.fats + " g, proteins " + this.proteins + 
+                                    " g, carbohydrates " + this.carbohydrates + " g.<br>The energy value per 100 g is " + this.energy_value + 
+                                    " kJ. <br> Weight " + this.weight + " g.";
+        }
+        //подсчет калорий на вес батончика
+        Chocolate.prototype.calcCalorie = function() {
+            return this.energy_value * this.weight / 100;
+        }
+
+        /* ============== main ============= */
+        let bar = new Chocolate("Lion", 20.3, 4.2, 68.7, 31, 1997);
+        let bar2 = new Chocolate("Mars", 15.3, 5.7, 85.3, 45, 2500);
+
+        document.write(bar.toString()); //вызываем явно метод
+        document.write("<br>");
+
+        let calorie = bar.calcCalorie();
+        document.write("Calorie " + calorie.toFixed(2) + " kcal per 31 g");
+        document.write("<hr>");
+
+        document.write(bar2); //неявно метод сработал
+        document.write("<br>");
+
+        calorie = bar2.calcCalorie();
+        document.write("Calorie " + calorie.toFixed(2) + " kcal per 45 g");
+        document.write("<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

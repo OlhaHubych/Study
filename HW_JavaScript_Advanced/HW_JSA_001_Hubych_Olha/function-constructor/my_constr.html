@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //конструктор
+        let Patient = function(name, age, disease) {
+            //свойства экземпляра
+            this.name = name;
+            this.age = age;
+            this.disease = disease;
+
+            //методы экземпляра
+            this.tellDisease = function () {
+                return document.write("I have " + this.disease);
+            }
+            this.introduce = function () {
+                return  document.write("Hello. I'am " + this.name  + ". I'am " + this.age + " years old.");
+            }
+        }
+
+        //свойство конструктора
+        Patient.room = 12;
+        //метод конструктора
+        Patient.tellRoom = function () {
+            return document.write("The patients are in " + Patient.room + " room.");
+        }
+
+        //создаем экземпляр
+        let patient1 = new Patient("Alex Greem", 45, "malaria");
+        let patient2 = new Patient("Nick", 34, "cholera");
+
+        //вызываем методы экземпляра
+        patient1.introduce();
+        document.write("<br>");
+        patient2.introduce();
+
+        //вызываем метод конструктора
+        document.write("<br>");
+        Patient.tellRoom();
+
+        //вызываем методы экземпляра
+        document.write("<br>");
+        patient1.tellDisease();
+        document.write("<br>");
+        patient2.tellDisease();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

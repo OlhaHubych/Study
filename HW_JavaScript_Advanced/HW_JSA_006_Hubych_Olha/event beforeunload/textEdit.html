@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let tmpButton;
+        let tmpText;
+        
+        window.addEventListener('beforeunload', init, false);
+
+        function init(event) {
+            /*let message = "Really want to leave?";
+            if(!event) {
+                event = window.event;
+            }
+            if(event) {
+                event.returnValue = message;
+            }
+            return message;
+            */
+
+            let message = "Would you like to save the information?";
+            if(tmpText && !tmpButton) {
+                event.preventDefault();
+                event.returnValue = message;
+                console.log(message);      
+            }
+            return message;
+        }   
+
+        window.onload = function () {
+            let text = document.querySelector('#textEdit');
+            let butSave = document.querySelector('#butSave');
+            
+            butSave.addEventListener('click', function () {
+                console.log(true);
+                return tmpButton = true; 
+
+            }, false);
+            
+            text.addEventListener('change', function () {
+                if(text.value != "") {
+                    console.log(true);
+                    return tmpText = true;
+                }
+            }, false)
+        }
+    </script>
+</head>
+<body>
+    <textarea name="textEdit" id="textEdit" cols="50" rows="10"></textarea>
+    <br>
+    <input type="button" value="Save" id="butSave">
+</body>
+</html>

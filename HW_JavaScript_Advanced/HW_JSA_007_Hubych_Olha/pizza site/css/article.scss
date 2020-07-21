@@ -1,0 +1,232 @@
+//---------------------------- variables ---------------------------
+$paddingArt: 2%;
+$heidhtArt: fit-content;
+
+$widthField: 70vw;
+$heightPrice: 4em;
+$heightImgBlock: 250px;
+$widthHR: 30%;
+$widthDelivery: 50%;
+
+$fontSize: 1.3em;
+@font-face {
+    font-family: "Comfortaa";
+    src: url("../font/Comfortaa/static/Comfortaa-Bold.ttf");
+}
+
+$colorBorderForm: rgb(241, 241, 37);
+$coloBGForm: white;
+$colorShadowForm: lightslategray;
+$colorError: hotpink;
+
+$imageBGArt: url(../img/vectorstock_11619985.jpg);
+//-------------------------------- import -------------------------
+@import 'mixin';
+
+//-------------------------------- main --------------------------
+@media screen and (min-width: 873px) {
+    .price-box {
+        @include height($heightPrice - 1.5);
+        p {
+            @include font-size($fontSize);
+        }
+    }
+    .delivery {
+        @include width($widthDelivery);
+    }
+}
+
+article {
+    margin: 0;
+    height: $heidhtArt;
+    padding: $paddingArt 0;
+    font-size: $fontSize;
+    font-family: Comfortaa;
+    background: {
+        image: $imageBGArt;
+        repeat: repeat;
+        size: 40%;
+    }
+    span {
+        color: $colorError;
+        margin: 0 auto;
+        animation: 4s message infinite;
+        display: block;
+        width: fit-content;
+        height: fit-content;
+    }
+    hr {
+        width: $widthHR;
+        margin: {
+            top: 0;
+            bottom: 2em;
+            left: auto;
+            right: auto;
+        }
+        border: {
+            top: 8px dotted orange;
+            bottom: none;
+            left: none;
+            right: none;
+        }
+    }
+    fieldset {
+        width: $widthField;
+        margin: 0 auto;
+        border-radius: 1.5em;
+        border-color: $colorBorderForm;
+        background-color: $coloBGForm;
+        box-shadow: 0 0 15px $colorShadowForm;
+        .menu {
+            margin-bottom: 2.5em;
+            p {
+                text-align: center;
+                font-size: 1.2*$fontSize;
+            }   
+        }
+        .btn-submit {
+            font-size: $fontSize*0.8;
+            font-family: Comfortaa;
+            text-transform: uppercase;
+            background-color: orange;
+            border-radius: 1.5em;
+            border: none;
+            width: fit-content;
+            margin: 0.5em auto;
+            padding: 0.8em 0.9em;
+            outline: none;
+            cursor: pointer;
+            display: block;
+            &:active {
+                transform: translateY(0.1em);
+            }
+        }
+    }
+}
+
+@keyframes message {
+    0% {
+        color: orchid;
+    }
+    50% {
+        color: purple;
+    }
+    100% {
+        color: $colorError;
+    }
+}
+
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .card {
+        height: fit-content;
+        width: fit-content;
+        align-content: center;
+        .img-block {
+            height: $heightImgBlock;
+
+            img {
+                display: block;
+                margin: auto;
+                width: fit-content;
+                height: fit-content;  
+            }
+        }
+        .info-block {
+            text-align: center;
+            height: fit-content;
+            padding-right: 1em;
+            text-align: left;
+
+            details {
+                text-align: left;
+                summary {
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.check {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.check + label {
+    cursor: pointer;
+    display: inline-block;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 0.7em;
+        height: 0.7em;
+        border: 2px solid gray;
+        background-color: white;
+        border-radius: 0.25em;
+        margin-right: 0.5em;
+    }
+}
+
+.check:checked + label {
+    &::before {
+        background-color: rgb(255, 187, 0);
+    }
+}
+.check:hover + label {
+    &::before {
+        box-shadow: 0 0 0 0.3em rgba(163, 194, 190, 0.5);
+    }
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-around;
+    background-color: beige;
+    border-radius: 0.5em;
+    margin-bottom: 2.5em;
+    font-size: $fontSize - 0.3;
+    height: $heightPrice;
+    p {
+        margin: 0;
+        align-self: center;
+    }
+    input {
+        text-align: center;
+        font-size: $fontSize;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:#D2E4C9;
+        border-radius: 0.5em;
+        border: none;
+        display: inline-block;
+    }
+}
+
+.delivery {
+    margin: 0 auto;
+    p {
+        margin-top: 0;
+        text-align: center;
+        font-size: $fontSize - 0.1;
+    }
+    .contacts {
+        background-color: whitesmoke;
+        list-style-type: none;
+        padding-left: 0;
+        .contact-item {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0.5em;
+            input {
+                flex: 1;
+            }
+            label {
+                margin-right: 0.2em;
+            }
+        }
+    }
+}

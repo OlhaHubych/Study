@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olha Hubych">
+    <title>Layout</title>
+    <link rel="stylesheet" href="attribute_class.css">
+    <script src="attribute_class.js"></script>
+    <script>
+        window.onload = function () {
+            Module.findClass('col2');
+            Module.findClass('head2');
+        }
+    </script>
+</head>
+<body>
+    <header class="head1">header 1</header>
+    <header class="head2">header 2</header>
+    <header class="head3">header 3</header> 
+    <p class="head1">p header</p>
+    
+    <h1 class="head2"></h1>
+    
+    <main class="clearfix">
+        <section class="col1">col 1</section>
+        <section class="col2">col 2</section>
+        <section class="col3">col 3</section>
+        <section>
+            <p>col4</p>
+        </section>
+        <section>col5</section>
+        <section>col6</section>
+        <h1 class="head2"></h1>
+    </main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* =================  define ================ */
+        //constructor
+        function Human (name, age, location) {
+            this.name = name;
+            this.age = age;
+            this.location = location;
+        }
+
+        //method for all the instance-Objects
+        Human.prototype.introduce = function ()  {
+            return document.write("My name is " + this.name + ". I'm " + 
+                                    this.age + " years old. I'm living in " + this.location);
+        }
+
+        //sorting function - min to max - Gnome sort
+        let sortElement = function (arr) {
+            let i = 1;
+            let temp;
+            while (i < arr.length) {
+                if (i == 0 || arr[i-1] <= arr[i]) {
+                    i++;
+                } 
+                else {
+                    temp = arr[i];
+                    arr[i] = arr[i-1];
+                    arr[i-1] = temp;
+                    i--;
+                }
+            }
+            return arr;
+        }
+
+        /* ==============  main  ============= */
+        let array_age = [];
+        
+        let human1 = new Human("Tim", 35, "Mexico");
+        array_age.push(human1.age);
+        
+
+        let human2 = new Human("Alex", 28, "Rio");
+        array_age.push(human2.age);
+
+        let human3 = new Human("Will", 40, "Sidney");
+        array_age.push(human3.age);
+        
+        //show result
+        human1.introduce();
+        document.write("<br>");
+
+        human2.introduce();
+        document.write("<br>");
+
+        human3.introduce();
+        document.write("<br>");
+
+        document.write("Array of ages: ");
+        document.write(array_age.join(' | '));
+        document.write("<br>");
+        
+        document.write("Sorted array min to max: ");
+        let sort_age_min_to_max = sortElement(array_age);
+        document.write(sort_age_min_to_max.join(' | '));
+        document.write("<br>");
+
+        document.write("Sorted array max to min: ");
+        let sort_age_max_to_min = sort_age_min_to_max.reverse();
+        document.write(sort_age_max_to_min.join(' | '));            
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

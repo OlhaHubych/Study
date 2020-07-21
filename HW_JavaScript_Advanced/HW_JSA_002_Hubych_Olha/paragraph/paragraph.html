@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выравнивание</title>
+    <link rel="stylesheet" href="paragraph.css">
+    
+    <!-- скрипт с реализацией пространства имен через объект -->
+    <script src="Module1.js"></script>
+    <!-- срабатывает скрипт после полной загрузки документа -->
+    <script>
+        window.onload = function () {
+            Module1.rewriteParagraph();
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>Это параграфы с выравниваем по левому краю</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, rem dicta neque earum ea sequi repellat quia recusandae suscipit 
+            iusto adipisci amet in beatae omnis ullam dignissimos. Eligendi, voluptas id.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et obcaecati natus eveniet aliquid soluta fuga. Vitae ipsa cupiditate 
+            sapiente accusantium facere minima. Unde laboriosam explicabo soluta harum? Adipisci, repudiandae ipsam.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni vitae quidem quasi eos. Amet deleniti voluptate deserunt 
+            blanditiis sequi! In pariatur et minus quod veritatis nisi unde veniam ipsam sapiente.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis aliquam autem, rerum corrupti voluptatum hic incidunt sapiente 
+            accusantium labore animi quos non ea, id sit dolore provident obcaecati repudiandae exercitationem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus porro illum, quaerat autem sit libero vitae sint nostrum 
+            commodi placeat ab quas ratione maxime esse. Quaerat deleniti laborum enim saepe.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, optio odit nostrum ut, dolore sunt magni quis veniam adipisci 
+            fuga animi? Quos hic dolorem incidunt quod natus eaque pariatur labore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae saepe vel adipisci deserunt quam sed aliquam omnis hic vero 
+            ex necessitatibus blanditiis eum id quibusdam praesentium ducimus, repellat voluptatum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quod quam similique, eaque saepe quaerat neque fugit, sint ullam 
+            earum a vero animi, non molestiae dignissimos rerum quo! Qui, repellat!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil modi sequi, sit a aspernatur aut placeat voluptates ipsa perspiciatis 
+            minus soluta esse quo qui itaque accusamus saepe autem quas molestiae!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, minima. Nobis laboriosam unde cupiditate molestias temporibus possimus 
+            vero totam provident impedit fugiat laborum, id suscipit, ullam ab, nihil eaque soluta.</p>
+    </div>
+    <div>
+        <h2>Этот параграф без выравнивания</h2>
+        <p id="p_block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo saepe eius provident quas, optio eligendi voluptatem quibusdam, iure ullam 
+            dolorem, laudantium tenetur totam? Assumenda vero magni amet aliquid, eligendi dicta!</p>
+    </div>
+    <!-- скрипт с реализацией пространства имен через анонимную функцию
+            ставим вконце документа, чтобы сначала отрисовался документ, а затем начал работу скрипт  -->
+    <!-- <script src="Module2.js"></script> -->
+</body>
+</html>

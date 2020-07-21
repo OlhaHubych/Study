@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* =============== define ============= */
+        //constructor
+        let Human = function (full_name, salary, position) {
+            //all for instance
+            this.full_name = full_name;
+            this.salary = salary;
+            this.position = position;
+
+            this.getSalary = function() {
+                return this.salary;
+            }
+            this.tell = function() {
+                return document.write(this.full_name + "<br>Position: " + this.position + "<br> Salary: " + this.salary);
+            }
+        }
+        //all for constructor
+        Human.tax = 0.05;
+        Human.fee = 1000;
+
+        Human.getSumTax = function(salary) {
+            return salary *= Human.tax;
+        }
+        
+        /* ================ main ============= */
+        let entrepreneur1 = new Human("John Walker", 50000, "engineer");
+
+        entrepreneur1.tell();
+        document.write("<br>");
+
+        document.write("The Tax = " + Human.tax);
+        document.write("<br>");
+        let need_pay_tax = Human.getSumTax(entrepreneur1.getSalary());
+        document.write("Need to pay the tax: " + need_pay_tax);
+        document.write("<br>");
+
+        document.write("The Fee = " + Human.fee);
+        document.write("<br>");
+        let final_salary = entrepreneur1.getSalary() - need_pay_tax - Human.fee;
+        document.write("The final salary without tax and fee: " + final_salary);
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

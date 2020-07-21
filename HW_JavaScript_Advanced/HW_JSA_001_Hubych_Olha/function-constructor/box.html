@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* ============ define ============ */
+        //constructor
+        let Box = function(width, height, depth, material) {
+            //property for an instance-object
+            this.width = width;
+            this.height = height;
+            this.depth = depth;
+            this.material = material;
+        }
+        //methods for an instance-object
+        Box.prototype.getVolume = function() { //find the volume
+            return this.width * this.height * this.depth;
+        }
+        Box.prototype.equals = function(obj_material) { //check the material
+            if(this.material === obj_material.material) return 1;
+            else return 0;
+        }
+
+        //function to show the result of checking
+        let checkMaterial = function(first_box, second_box) {
+            if(first_box.equals(second_box)) document.write("The boxes are made of one material: " + first_box.material);
+            else document.write("The boxes aren't made of one material. First box - " + first_box.material + ". Second box - " + second_box.material);
+        }
+
+        /* ============ main ========= */
+        let box1 = new Box(2, 3, 5, "cardboard");
+        let box2 = new Box(3, 6, 7, "cardboard");
+        let box3 = new Box(4, 12, 7, "plastic");
+
+        let volume = box1.getVolume();
+        document.write("Box 1: ");
+        document.write("Volume = " + volume + " m<sup>3</sup>");
+        document.write("<br>");
+
+
+        volume = box2.getVolume();
+        document.write("Box 2: ");
+        document.write("Volume = " + volume + " m<sup>3</sup>");
+        document.write("<br>");
+
+        volume = box3.getVolume();
+        document.write("Box 3: ");
+        document.write("Volume = " + volume + " m<sup>3</sup>");
+        document.write("<hr>");
+        
+        document.write("Box 1 and Box 2: ")
+        checkMaterial(box1, box2);
+        document.write("<br>");
+
+        document.write("Box 1 and Box 3: ");
+        checkMaterial(box1, box3);
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

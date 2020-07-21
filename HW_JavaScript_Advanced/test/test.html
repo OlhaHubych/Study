@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin-bottom: 10px;
+        }
+        .div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        div:hover {
+            background-color: yellow;
+        }
+        
+    </style>
+    <script>
+        window.onload = function () {
+            let allDiv = document.querySelectorAll("div");
+            console.log(allDiv);
+            for(let el of allDiv){
+                el.append(document.createElement("p"));
+            }
+            let div = document.querySelectorAll(".div"); 
+            console.log(div);
+            let hover = document.querySelectorAll('div :hover');
+            console.log(hover);
+
+
+
+
+
+            alert(/\bПривет\b/.test('Привет, Java'));
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="div">
+        <h1>h1</h1>
+        <p>p1</p>
+        <p>p2</p>
+    </div>
+    <div>ghjk</div>
+    <div>hjk
+        <p>p3</p>
+        <h1></h1>
+    </div>
+    <div>io</div>
+</body>
+</html>

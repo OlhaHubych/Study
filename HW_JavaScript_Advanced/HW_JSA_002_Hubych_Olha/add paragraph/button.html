@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload  = function () {
+            
+            //get element input
+            let input = document.getElementById("start");
+            let temp = 0;
+
+            //handler of pressed button
+            input.onclick =  function () {
+                if(temp <= 9) {                                     //allow to press button 10 times
+                    let paragraph = document.createElement("p");    //create new element - paragraph
+                    paragraph.style.border = "1px solid green";     //add stype to paragraph
+                    paragraph.innerHTML = "New paragraph";          //add text into paragraph
+                    input.after(paragraph);                         //add paragraph after button-input
+                    temp++;                                         //increase counter
+                }
+                else {
+                    while(temp > 0) {                               
+                        document.body.lastElementChild.remove();    //delete all added paragraphs
+                        temp--;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="start" type="button" value="Add paragraph">
+</body>
+</html>

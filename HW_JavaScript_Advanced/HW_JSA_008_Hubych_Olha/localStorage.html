@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', init, false);
+
+        function init () {
+            
+            if(getDataLocalStorage("setUpColor")) {
+                document.body.style.backgroundColor = getDataLocalStorage("setUpColor");
+                
+            }
+            if(getDataLocalStorage("setUpFontSize")) {
+                document.body.style.fontSize = getDataLocalStorage("setUpFontSize");
+            }
+
+            function $ (elemId) {
+                return document.querySelector(elemId);
+            }
+
+            $('#fontSize').addEventListener('change', fontSizeHandler, false);
+            $('#color').addEventListener('change', colorHandler, false);
+            $('#btnSave').addEventListener('click', saveHandler, false);
+
+            let setUpColor;
+            let setUpFontSize;
+
+            function colorHandler () {
+                let colors = this.options;
+                console.dir(colors);
+                for(let i = 1; i < colors.length; i++) {
+                    if (colors[i].selected) {
+                        setUpColor = colors[i].value;
+                        document.body.style.backgroundColor = setUpColor;
+                    }
+                }
+            }
+
+            function saveHandler () {
+                localStorage.setUpFontSize = setUpFontSize;
+                localStorage.setUpColor = setUpColor;
+               
+                document.body.style.backgroundColor = setUpColor;
+                document.body.style.fontSize = setUpFontSize;
+                return true;
+            }
+
+            function fontSizeHandler () {
+                let pattern = this.dataset.pattern;
+                let message = this.dataset.msg;
+                let value = this.value;
+                let maxFontSize = 2000;
+
+                if(value != "") {
+                    let match = value.search(pattern);
+                    if(match == -1 || (+value > maxFontSize) || (+value < 0)) {
+                        document.getElementById('userMsg').innerHTML = message;
+                        return false;
+                    }
+                    else {
+                        setUpFontSize = value  + "px";
+                        document.body.style.fontSize = setUpFontSize;
+                        return true;
+                    }
+                }
+            }
+
+            function getDataLocalStorage(nameKey) {
+                return localStorage.getItem(nameKey);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="fontSize">Укажите размер шрифта (px)</label>
+        <input type="text" id="fontSize" data-pattern="^\d+[^\.,]$" data-msg="Неверный формат. Допускаются только целые числа, максимум 2000.">
+        <span id="userMsg"></span>
+        <br><br>
+
+        <select name="color" id="color">
+            <option selected disabled>Выберите цвет</option>
+            <option value="lightyellow">Желтый</option>
+            <option value="lightgray">Серый</option>
+            <option value="lightblue">Голубой</option>
+            <option value="Pink">Розовый</option>
+        </select>
+        <br><br>
+        <input type="button" id="btnSave" value="Сохранить">
+    </form>
+    
+</body>
+</html>

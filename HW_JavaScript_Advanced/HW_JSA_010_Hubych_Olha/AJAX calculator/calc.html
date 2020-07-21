@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', init, false);
+        function init() {
+
+            let firstNumber = document.querySelector('#firstNumber'),
+                secondNumber = document.querySelector('#secondNumber'),
+                resultNumber = document.querySelector('#resultNumber'),
+                sumBtn = document.querySelector('#sumBtn'),
+                message = document.querySelector('#message');
+
+            firstNumber.addEventListener('change', function(e1) { checkNumber(e1); }, false);
+            secondNumber.addEventListener('change', function(e2) { checkNumber(e2); }, false);
+            sumBtn.addEventListener('click', hadlerSendRequest, false);
+
+            function checkNumber(element) {
+                let pattern = /^-*\d+$/;
+                let msgInteger = "Only integers are accepted!";
+                if (element.target.value.search(pattern) == -1) {
+                        message.innerHTML = msgInteger;
+                        return false;
+                }
+            }
+            
+            function hadlerSendRequest(e) {
+                e.preventDefault();
+
+                let data = "a=" + firstNumber.value + "&b=" + secondNumber.value;
+                console.log(data);
+
+                let request = new XMLHttpRequest();
+                request.open('POST', 'CalcHandler.ashx');
+                request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                request.onreadystatechange = function () {
+                    if (request.readyState == 4 && request.status == 200) {
+                        if(isNaN(+request.responseText)) { //if response is message
+                            resultNumber.value = 0;
+                            message.innerHTML = "There is some problem. Please reload the page and try again. Error: " + request.responseText;
+                            
+                        }
+                        else { //if response is sum
+                            resultNumber.value = request.responseText; 
+                        }
+                    }
+                }
+                request.send(data); 
+
+                /*
+                fetch('CalcHandler.ashx', {
+                    method: 'POST',
+                    body: new FormData(sum)
+                })
+                    .then(response => response.json())
+                    .then(result => resultNumber.value = result)
+                    .catch(error => message.innerHTML = error);
+                */
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="sum"> 
+        <span id="message"></span> <br>
+        <label for="firstNumber">A</label>
+        <input type="text" id="firstNumber" value="0"><br>
+        
+
+        <label for="secondNumber">B</label>
+        <input type="text" id="secondNumber" value="0"><br><br>
+
+        <input type="submit" id="sumBtn" value="Count sum"> <br><br>
+
+        <label for="resultNumber">A + B</label>
+        <input type="text" id="resultNumber" value="0" disabled>
+    </form>
+</body>
+</html>
