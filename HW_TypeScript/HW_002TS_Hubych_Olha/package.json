@@ -1,0 +1,16 @@
+{
+  "name": "hw_002ts_hubych_olha",
+  "version": "1.0.0",
+  "description": "hw_ts_02",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -w",
+    "start": "lite-server"
+  },
+  "author": "Hubych Olha",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "typescript": "^2.8.3"
+  }
+}
