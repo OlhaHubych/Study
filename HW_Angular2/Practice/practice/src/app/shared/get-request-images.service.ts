@@ -9,7 +9,6 @@ export class GetRequestImagesService {
   constructor(private http: HttpClient) { }
   
   takeImages() {
-    return this.http.get('https://jsonplaceholder.typicode.com/photos?_limit=10')
-    
+    return this.http.get('https://jsonplaceholder.typicode.com/photos?_limit=10');
   }
 }

@@ -1,11 +1,45 @@
-form {
-    text-align: center;
+.add-post {
+    width: 70%;
+    margin: 0 auto;
+    background-color: white;
 }
-
+form {
+    background-color: lightgray;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+.form-group {
+    margin: 0 auto;
+}
+h3 {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: rgb(88, 21, 21);
+}
 .ng-invalid {
     border: 3px solid red;
 }
 .ng-valid {
-    border: 3px solid green;
+    border: 3px solid black;
 }
-
+input {
+    display: block;
+    width: 97%;
+    height: 2em;
+    margin: .3em auto;
+    padding: 1.2em;
+    outline: none;
+    font-size: 1em;
+    color: gray;
+}
+.btn {
+    width: 30%;
+    padding: 0;
+    color: green;
+}
+.btn:hover {
+    background-color: rgb(9, 73, 41);
+    border-radius: 0.2em;
+    color: white;
+}

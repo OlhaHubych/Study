@@ -25,7 +25,6 @@ export class GalleryPageComponent implements OnInit {
 
     this.serviceHTTP.takeImages()
     .subscribe(response => { // subscribe - подписываемся на обзервабл объект. response - тут ожидаем ответ
-        console.log(response);
         this.allGallaryImages = response;
         this.items = response;
      })
@@ -42,5 +41,4 @@ export class GalleryPageComponent implements OnInit {
     };
     this.allGallaryImages.unshift(newObj);
   }
-
 }

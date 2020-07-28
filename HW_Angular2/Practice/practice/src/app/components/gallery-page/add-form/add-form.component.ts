@@ -12,8 +12,8 @@ interface sendedPost {
   styleUrls: ['./add-form.component.css']
 })
 export class AddFormComponent implements OnInit {
-  url: string = 'default';
-  title: string = 'some text';
+  url: string = 'Image URL';
+  title: string = 'Some title';
   formAdd: FormGroup;
 
   constructor(private fb: FormBuilder) { }
@@ -22,19 +22,19 @@ export class AddFormComponent implements OnInit {
   addNewPost: EventEmitter<sendedPost> = new EventEmitter();
 
   ngOnInit(): void {
-    this.formAdd = this.fb.group({
+    
+    this.formAdd = this.fb.group(
+    {
       urlImage: [this.url, [Validators.required, Validators.minLength(4)] ],
       titleText: [this.title, Validators.required]
     })
   }
   addPost(newPost) {
-    console.log(this.formAdd);
     if(this.formAdd.valid) {
-      console.log('work');
+      if(this.formAdd.value.urlImage === 'Image URL') {
+        this.formAdd.value.urlImage = '../../../../assets/1.jpg';
+      }
       this.addNewPost.emit(newPost);
     }
   }
-
-  
-
 }

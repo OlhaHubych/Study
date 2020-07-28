@@ -1,13 +1,27 @@
 nav {
     display: flex;
     justify-content: center;
+    align-content: center;
+    min-height: 5vh;
 }
-
 a {
-    padding: 10px;
-    border: 1px solid black;
+    padding: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+}
+a:hover {
+    background: black;
+    color: white;
+}
+.active {
+    background-color: red;
+    color: white;
 }
 
-.active {
-    background: lightskyblue;
+footer {
+    text-align: right;
 }
+
+

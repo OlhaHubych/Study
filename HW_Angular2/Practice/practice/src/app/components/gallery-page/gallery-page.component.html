@@ -1,16 +1,28 @@
-<!-- input - как onchange но только после потери фокуса работает -->
-<input type="text" (input)='filterImgs()' [(ngModel)]="search">
-<hr>
-<app-add-form (addNewPost)="addImgAngTitle($event)"></app-add-form>
-<hr>
+<div class="gallery">
+    <app-add-form (addNewPost)="addImgAngTitle($event)"></app-add-form>
+<!-- input - аналогичен onchange, но только после потери фокуса работает -->
+    <div class="search-box">
+        <label for="search">Search post</label>
+        <input type="text" id="search" (input)='filterImgs()' [(ngModel)]="search" placeholder="Type post's title...">
+    </div>
 
-<div class="posts">
-    <div *ngFor='let image of items'> 
-        <img [src]="image.url" alt="">
-        <b>{{ image.title }}</b> 
+    <div class="posts-box">
+        <div *ngFor='let image of items' class="post"> 
+            <div class="image">
+                <img [src]="image.url" alt="Image">
+            </div>
+            <div class="about">
+                <h3>Post's Title: {{ image.title }} </h3>
+                <h4>About:</h4>
+                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Cum quas, harum tempora cumque aut facilis.  
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <b>{{ image.thumbnailUrl }}</b> 
+                </p>
+            </div>
+        </div>
     </div>
 </div>
-
 
 <!-- <ul>
     <li *ngFor='let image of items'> {{ image.title }}</li>
