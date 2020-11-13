@@ -1,0 +1,35 @@
+<div class="timer_window">
+  <div class="btn_block">
+    <div>
+      <button class="reset" id="reset">Reset</button>
+    </div>
+
+    <div>
+      <button class="stop" id="stop">Stop</button>
+    </div>
+    
+    <div>
+      <button class="pause" id="pause">Wait</button>
+    </div>
+
+    <div>
+      <button class="active" id="start">Start</button>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <tr>
+        <td>Hours</td>
+        <td>Minutes</td>
+        <td>Seconds</td>
+      </tr>
+      <tr>
+        <td><input type="text" name="hours"  [(ngModel)]="stateStopwatch.hours" disabled></td>
+        <td><input type="text" name="minutes" [(ngModel)]="stateStopwatch.minutes" disabled></td>
+        <td><input type="text" name="seconds" [(ngModel)]="stateStopwatch.seconds" disabled></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
